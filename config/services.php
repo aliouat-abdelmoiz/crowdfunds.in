@@ -1,0 +1,50 @@
+<?php
+
+return [
+
+	/*
+	|--------------------------------------------------------------------------
+	| Third Party Services
+	|--------------------------------------------------------------------------
+	|
+	| This file is for storing the credentials for third party services such
+	| as Stripe, Mailgun, Mandrill, and others. This file provides a sane
+	| default location for this type of information, allowing packages
+	| to have a conventional place to find your various credentials.
+	|
+	*/
+
+	'mailgun' => [
+		'domain' => 'https://api.mailgun.net/v3/crowdfunds.in',
+		'secret' => 'key-48b075b3529318701a48639ce4e588ef',
+	],
+
+	'mandrill' => [
+		'secret' => '',
+	],
+
+	'ses' => [
+		'key' => '',
+		'secret' => '',
+		'region' => 'us-east-1',
+	],
+
+	'stripe' => [
+		'model'  => 'App\User',
+		'key' => env('STRIPE_PUBLIC'),
+		'secret' => env('STRIPE_API_SECRET'),
+	],
+
+	'facebook' => [
+		'client_id'     => '344429762299755',
+		'client_secret' => '944b83c974818dfc34349e0bda37242c',
+		'redirect'         => 'http://crowdfunds.in/afterlogin',
+	],
+
+    'google' => [
+		'client_id'     => '861027737351-b2hemehpvh6erfu8gb3imf74649hgqqh.apps.googleusercontent.com',
+		'client_secret' => 'q-eIIjs2FYZZ_QtCK1cRnPjP',
+		'redirect'         => 'http://yourserviceconnection.com/afterLoginGmail',
+	],
+
+];
