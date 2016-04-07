@@ -44,36 +44,33 @@ class SendJobConsole extends Command
     {
         $projects = Project::whereProviderId(null)->wherePremium(1)->where('forward_date', '<=', Carbon::now())->get();
 
-        foreach ($projects as $project) {
+        try {
+            foreach ($projects as $project) {
 
-            Project::find($project->id)->update([
-                'premium' => 0,
-                'forward_date' => null
-            ]);
+                Project::find($project->id)->update([
+                    'premium' => 0,
+                    'forward_date' => null
+                ]);
 
-            $provider = \DB::select('call GetCatSubcat("' . $project->categories_id . '","' . $project->subcategories_id . '","' . User::find($project->user_id)->userinfo->latitude . '", "' . User::find($project->user_id)->userinfo->longitude . '", "' . User::find($project->user_id)->userinfo->city . '", "' . User::find($project->user_id)->userinfo->state . '")');
+                $provider = \DB::select('call GetCatSubcat("' . $project->categories_id . '","' . $project->subcategories_id . '","' . User::find($project->user_id)->userinfo->latitude . '", "' . User::find($project->user_id)->userinfo->longitude . '", "' . User::find($project->user_id)->userinfo->city . '", "' . User::find($project->user_id)->userinfo->state . '")');
 
-//
-//            $provider = \DB::select("SELECT providers.id,
-//            providers.user_id,
-//            providers.range,
-//            provider_cat_subcat.category_id,
-//            provider_cat_subcat.subcategory_id,
-//            provider_cat_subcat.provider_id,
-//            userinformation.user_id,
-//            userinformation.zip_code,
-//            userinformation.latitude,
-//            userinformation.longitude
-//            FROM userinformation INNER JOIN providers ON userinformation.user_id = providers.user_id
-//            INNER JOIN provider_cat_subcat ON provider_cat_subcat.provider_id = providers.id
-//            where provider_cat_subcat.category_id LIKE '%" . $project->categories_id . "%' AND provider_cat_subcat.subcategory_id LIKE
-//            '%" . $project->subcategories_id . "%' AND inrange('" . User::find($project->user_id)->userinfo->latitude . "','" . User::find($project->user_id)->userinfo->longitude
-//                . "', userinformation.latitude, userinformation.longitude, 'Miles') < 25");
-
-            foreach ($provider as $select_provider) {
-                echo $select_provider->name . "\n";
+                foreach ($provider as $select_provider) {
+                    ProviderClient::create(['user_id' => \Auth::id(), 'provider_id' => $select_provider->provider_id, 'project_id' => $provider->id]);
+                    \Mail::send('emails.job-notifcation', [\Input::get('project_title'), Input::get('description') ], function ($message) use ($select_provider) {
+                        $message->to(Provider::find($select_provider->provider_id)->user->email)->subject('New Project Received');
+                        Notification::create([
+                            'text' => 'Received New Job ' . Input::get('project_title'),
+                            'link' => '/projects',
+                            'from' => Auth::user()->id,
+                            'user_id' => Provider::find($select_provider->provider_id)->user_id
+                        ]);
+                    });
+                }
             }
+        } catch (\Exception $e) {
+            echo $e->getMessage();
         }
+
     }
 
 
