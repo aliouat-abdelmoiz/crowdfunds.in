@@ -9,7 +9,6 @@ use App\Subcategory;
 use App\User;
 use App\Userinformation;
 use Auth;
-use Illuminate\Http\Request;
 use Image;
 
 class UserController extends Controller
@@ -141,4 +140,20 @@ class UserController extends Controller
         return \Redirect::route('user.index');
     }
 
+    public function changePassword()
+    {
+        return view('auth.change');
+    }
+
+    public function ResetPassword()
+    {
+        if(Auth::check()) {
+            if(\Request::get('password') != null | \Request::get('password') != '') {
+                Auth::user()->password = bcrypt(\Request::get('password'));
+                Auth::user()->save();
+                \Session::flash('success', 'Password Changed');
+                return \Redirect::to('/profile');
+            }
+        }
+    }
 }

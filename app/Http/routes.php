@@ -80,12 +80,12 @@ Route::post('/file/post', 'Api@PostFile');
 Route::group(['middleware' => ['auth', 'UserRoles', 'VerifyAC']], function () {
     Route::resource('notifications', 'NotificationController');
     Route::resource('user', 'UserController');
+    Route::get('/password/change', 'UserController@changePassword');
+    Route::post('/password/change', 'UserController@ResetPassword');
     Route::get('profile', 'Profile@index');
     Route::get('projects', 'Profile@projects');
     Route::get('/message', 'MessageController@index');
     Route::get('/account/delete', function () {
-        //$conversation = DB::table('conversation_user')->where('user_id', '=', Auth::id())->get();
-        //DB::table('conversation_user')->where('conversation_id', '=', $conversation[0]->conversation_id)->delete();
         User::find(Auth::id())->delete();
         return Redirect::to('/auth/login');
     });

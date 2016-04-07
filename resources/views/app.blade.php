@@ -123,6 +123,8 @@
             <article class="col-md-8 text-right no-padding">
                 <i class="fa fa-external-link-square"><span class="text"><a
                                 href="/auth/logout">Logout</a></span></i>
+                <i class="fa fa-key"><span class="text"><a
+                                href="/password/change">Change Password</a></span></i>
 
                 <i class="fa fa-envelope"><a class="low-opacity" href="/message"><span class="text"
                                                                                        id="newmessages">Messages</span></a></i>
