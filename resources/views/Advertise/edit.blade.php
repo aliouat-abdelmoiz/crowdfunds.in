@@ -38,7 +38,7 @@
                 <img src="/uploads/premium/{{ $image }}" alt="">
             @endforeach
         </div>
-        <select name="categories[]" id="category" class="form-control add-margin">
+        <select name="categories" id="category" class="form-control add-margin">
             @foreach($categories as $category)
                 <option value="{{ $category->id }}">{{ $category->name }}</option>
             @endforeach
