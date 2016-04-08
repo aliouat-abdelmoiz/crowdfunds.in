@@ -175,7 +175,7 @@ class AdvertiseController extends Controller
                             $plan->active = 1;
 
                             if ($plan->save()) {
-                                $categories = serialize(json_encode(\Input::get('categories')));
+                                $categories = \Input::get('categories');
                                 $subcategories = serialize(json_encode(\Input::get('subcategories')));
                                 $title = \Input::get('title');
                                 $description = \Input::get('description');
@@ -355,7 +355,7 @@ class AdvertiseController extends Controller
      */
     public function update($id)
     {
-        $categories = serialize(json_encode(\Input::get('categories')));
+        $categories = \Input::get('categories');
         $subcategories = serialize(json_encode(\Input::get('subcategories')));
         $title = \Input::get('title');
         $description = \Input::get('description');
