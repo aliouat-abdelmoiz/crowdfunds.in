@@ -44,7 +44,7 @@
             </div>
         @endif
         <div class="col-md-12">
-            <p><b>{{ $p->user->name }} Provide Service in range - {{ $p->range }}</b></p>
+            <p><b>{{ $p->user->name }} Provide Service in range - {{ $p->range }} Miles</b></p>
         </div>
     @endforeach
     @if(empty($select_category_name) || empty($select_subcategory_name))

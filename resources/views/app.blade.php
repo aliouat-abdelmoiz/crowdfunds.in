@@ -8,7 +8,7 @@
     <meta name="ROBOTS" content="INDEX, FOLLOW">
     <meta name="author" content="@yield('author')">
     <meta name="keywords" content="@yield('keywords')">
-    <meta name="google-site-verification" content="txHaVVh3gwpiIVTX8_-oR2D25IaXuednax3Cc5ZBQOI" />
+    <meta name="google-site-verification" content="txHaVVh3gwpiIVTX8_-oR2D25IaXuednax3Cc5ZBQOI"/>
     <link href="http://facebook.com/yourserviceconnection" rel="publisher"/>
     {!! Html::style('css/app.css') !!}
     {!! Html::style('css/style.min.css') !!}
@@ -96,21 +96,6 @@
                     <span class="text">You are logged as <b>
                             <a href="/profile">{{ Auth::user()->name == "" ? Auth::user()->username : Auth::user()->name }}</a></b>
                         </span>
-                    @if(Auth::check())
-                        @if(Auth::user()->subscription == null)
-                            <button class="btn btn-sm btn-success" id="subscribe" v-on:click="subscribe">Subscribe
-                            </button>
-                        @else
-                            @if(Auth::user()->subscription->subscribed == 1)
-                                <button class="btn btn-sm btn-success" id="unsubscribe" v-on:click="unsubscribe">
-                                    Unsubscribe
-                                </button>
-                            @else
-                                <button class="btn btn-sm btn-success" id="subscribe" v-on:click="subscribe">Subscribe
-                                </button>
-                            @endif
-                        @endif
-                    @endif
                 </i>
             @endif
         </article>
@@ -183,7 +168,8 @@
 {{--<script src="lib/jquery.infinitescroll.js"></script>--}}
 {{--<script src="lib/vue.js"></script>--}}
 
-<script src="https://code.jquery.com/jquery-2.2.1.js" integrity="sha256-eNcUzO3jsv0XlJLveFEkbB8bA7/CroNpNVk3XpmnwHc=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.1.js" integrity="sha256-eNcUzO3jsv0XlJLveFEkbB8bA7/CroNpNVk3XpmnwHc="
+        crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
@@ -205,80 +191,30 @@
     <script>
 
         var source = new EventSource("/messages");
-        source.onmessage = function(event) {
+        source.onmessage = function (event) {
             if (event.data != 0) {
                 $("#newmessages").html(" " + event.data + " New Message's").parent().removeClass('low-opacity').addClass('red');
             }
         };
         var notification = new EventSource("/notification");
-        notification.onmessage = function(event) {
-            if(event.data != 0) {
+        notification.onmessage = function (event) {
+            if (event.data != 0) {
                 $(".notification").html(" " + event.data + " New Notification's").parent().removeClass('low-opacity').addClass('red');
             }
         };
     </script>
-
     <script>
-        var Subscribe = new Vue({
-            el: "#bodycontainer",
-            methods: {
-                @if(Auth::user()->subscription != null)
-                unsubscribe: function () {
-                    $.ajax({
-                        url: "/api/unsubscribe",
-                        method: "POST",
-                        data: {
-                            _token: "{{ csrf_token() }}"
-                        },
-                        success: function (result) {
-                            if (result == "Success") {
-                                swal("Unsubscribed", "Oh, We will try to make it better.", "success");
-                                window.location.reload();
-                            }
-                        }
-                    });
-                },
-                subscribe: function () {
-                    $.ajax({
-                        url: "/api/subscribe",
-                        method: "POST",
-                        data: {
-                            _token: "{{ csrf_token() }}",
-                            _id: "{{ Auth::user()->subscription->user_id }}"
-                        },
-                        success: function (result) {
-                            if (result == "Success") {
-                                swal("Subscribed", "Thanks for subscribe you can discontinue anytime.", "success");
-                                window.location.reload();
-                            }
-                        }
-                    });
-                },
-                @else
-                subscribe: function () {
-                    $.ajax({
-                        url: "/api/subscribe",
-                        method: "POST",
-                        data: {
-                            _token: "{{ csrf_token() }}"
-                        },
-                        success: function (result) {
-                            if (result == "Success") {
-                                swal("Subscribed", "Thanks for subscribe you can discontinue anytime.", "success");
-                                window.location.reload();
-                            }
-                        }
-                    });
-                }
-                @endif
-            }
-        })
-    </script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-53421234-1', 'auto');
         ga('send', 'pageview');
