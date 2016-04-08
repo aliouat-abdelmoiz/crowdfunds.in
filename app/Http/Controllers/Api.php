@@ -714,7 +714,7 @@ class Api extends Controller
     {
         header('Content-Type: text/event-stream');
         header('Cache-Control: no-cache');
-        $notifcation = \DB::table('Notifications')->where('user_id', '=', \Auth::id())->where('read', '=',
+        $notifcation = \DB::table('notifications')->where('user_id', '=', \Auth::id())->where('read', '=',
             '0')->count();
         echo "data: $notifcation \n\n";
         flush();

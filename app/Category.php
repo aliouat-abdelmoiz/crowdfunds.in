@@ -84,9 +84,9 @@ class Category extends Model
             }
 
             return "uploads/users/logos/" . $provider;
+        } else {
+            return "not";
         }
-
-        return "not";
 
     }
 
