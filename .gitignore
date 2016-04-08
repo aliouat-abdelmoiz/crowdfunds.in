@@ -1,1 +1,7 @@
+/vendor
+/node_modules
+/public/uploads
+/public/images
+/public/vendor
+/bower_components
 .env

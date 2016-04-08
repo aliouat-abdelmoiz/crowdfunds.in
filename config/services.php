@@ -38,7 +38,7 @@ return [
 	'facebook' => [
 		'client_id'     => '344429762299755',
 		'client_secret' => '944b83c974818dfc34349e0bda37242c',
-		'redirect'         => 'http://crowdfunds.in/afterlogin',
+		'redirect'         => 'http://yourserviceconnection.com/afterlogin',
 	],
 
     'google' => [
