@@ -30,6 +30,7 @@
                                      src="{{ \App\Category::GetPrimaryUserPic($category->id) == "not" ? "http://admin.yourserviceconnection.com/upload/categories/images/thumbs/$category->image" : \App\Category::GetPrimaryUserPic($category->id) }}"
                                      alt="{{ $category->name }}"/>
                             </a>
+                            <p>{{ \App\Category::GetPrimaryUserPic($category->id) }}</p>
                             <p class="categories-subcategories-margin">{{ str_limit($category->name, 30) }}</p>
                             <a href="#" class="readmore categories-subcategories-margin">Read More...</a>
                         </li>
