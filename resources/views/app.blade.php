@@ -202,6 +202,7 @@
                 $(".notification").html(" " + event.data + " New Notification's").parent().removeClass('low-opacity').addClass('red');
             }
         };
+
     </script>
     <script>
         (function (i, s, o, g, r, a, m) {
