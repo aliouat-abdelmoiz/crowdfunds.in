@@ -82,9 +82,9 @@ class Category extends Model
                 $plan->balance = $balance;
                 $plan->save();
 
-                $adv_impression = $plan->advertise->impression + 1;
-                $plan->advertise->impression = $adv_impression;
-                $plan->advertise->save();
+                \DB::table('adv__managements')->wherePlanId($plan->id)->update([
+                    'total_impression' => \DB::raw('total_impression + 1')
+                ]);
 
             }
 
