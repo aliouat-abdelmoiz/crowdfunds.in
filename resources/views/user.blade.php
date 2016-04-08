@@ -7,7 +7,13 @@
         <div class="col-md-2 profile text-center">
             <h4 class="title">User Profile</h4>
 
-            <img src="/uploads/users/logos/{{ Auth::user()->provider->logo == "" ? Auth::user()->avatar : Auth::user()->provider->logo }}" alt="">
+            @if(Auth::user()->hasRole('Provider'))
+                <img src="/uploads/users/logos/{{ Auth::user()->provider->logo == "" ? Auth::user()->avatar : Auth::user()->provider->logo }}"
+                     alt="">
+            @else
+                <img src="/uploads/users/logos/{{  Auth::user()->avatar }}"
+                     alt="">
+            @endif
 
             <p class="user_name"><i data-toggle="tooltip" data-placement="top"
                                     title="{{ Session::get('activate') == '0' ? 'Account not activated' : 'Account Verified' }}"
