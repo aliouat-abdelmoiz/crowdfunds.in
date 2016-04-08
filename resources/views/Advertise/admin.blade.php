@@ -20,8 +20,8 @@
                 <td>{{ $advertise->plan_price / 100}}</td>
                 <td>{{ $advertise->balance / 100 }}</td>
                 <td>{{ $advertise->auto_renew == "1" ? "Yes" : "No" }}</td>
-                <td>{{ $advertise->total_click }}</td>
-                <td>{{ $advertise->total_impression }}</td>
+                <td>{{ $advertise->advertise->total_click }}</td>
+                <td>{{ $advertise->advertise->total_impression }}</td>
                 <td>{{ $advertise->daily_budget }}</td>
                 <td>{{ $advertise->currency }}</td>
             </tr>
