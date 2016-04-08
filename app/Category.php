@@ -81,6 +81,11 @@ class Category extends Model
                 $balance = $plan->balance - 4;
                 $plan->balance = $balance;
                 $plan->save();
+
+                $adv_impression = $plan->advertise->impression + 1;
+                $plan->advertise->impression = $adv_impression;
+                $plan->advertise->save();
+
             }
 
             return "uploads/users/logos/" . $provider;

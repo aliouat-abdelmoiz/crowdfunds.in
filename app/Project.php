@@ -67,7 +67,7 @@ class Project extends Model {
 
     public function provider()
     {
-        return $this->belongsTo("App\Provider");
+        return $this->belongsTo('App\Provider');
     }
 
     public function user()
