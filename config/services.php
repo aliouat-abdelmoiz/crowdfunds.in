@@ -36,8 +36,8 @@ return [
 	],
 
 	'facebook' => [
-		'client_id'     => '344429762299755',
-		'client_secret' => '944b83c974818dfc34349e0bda37242c',
+		'client_id'     => '104428796577848',
+		'client_secret' => '5e87b0f04852e4b439da52fbfe2951ae',
 		'redirect'         => 'http://yourserviceconnection.com/afterlogin',
 	],
 
