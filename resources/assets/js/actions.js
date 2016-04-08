@@ -37,6 +37,19 @@ function imgError(image) {
     return true;
 }
 
+var source = new EventSource("/messages");
+source.onmessage = function (event) {
+    if (event.data != 0) {
+        $("#newmessages").html(" " + event.data + " New Message's").parent().removeClass('low-opacity').addClass('red');
+    }
+};
+var notification = new EventSource("/notification");
+notification.onmessage = function (event) {
+    if (event.data != 0) {
+        $(".notification").html(" " + event.data + " New Notification's").parent().removeClass('low-opacity').addClass('red');
+    }
+};
+
 function loadMessages() {
     $.ajax({
         url: '/messages/count',
