@@ -3,7 +3,7 @@
     @if(Auth::check())
         {{ Auth::user()->name }} - Your Service Connection
     @else
-        {{ \App\Provider::find(Input::get('id'))->name }}
+        Your Service Connection
     @endif
 @endsection
 @section('content')
