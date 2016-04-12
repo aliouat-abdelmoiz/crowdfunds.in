@@ -13,10 +13,13 @@
             <tbody>
             @if(count($notifications) > 0)
                 @foreach($notifications as $notification)
-                    <tr class="clickable {{ $notification->read == 0 ? "bold" : "blank" }} " data-link="{{ $notification->link }}" data-notify="{{ $notification->id }}">
+                    <tr class="clickable {{ $notification->read == 0 ? "bold" : "blank" }} "
+                        data-link="{{ $notification->link }}" data-notify="{{ $notification->id }}">
                         <td>{{ $notification->created_at->diffForHumans() }}</td>
                         <td>{{ $notification->text }}</td>
-
+                        @if(\App\User::find($notification->from) != null)
+                            {{ \App\User::find($notification->from)->name }}
+                        @endif
                     </tr>
                 @endforeach
             @endif
@@ -26,7 +29,7 @@
 @endsection
 @section('script')
     <script>
-        $(".clickable").click(function() {
+        $(".clickable").click(function () {
             $that = $(this);
             $.ajax({
                 url: '/api/makereadnotify',
@@ -35,7 +38,7 @@
                     notification_id: $that.data('notify'),
                     _token: "{{ csrf_token() }}"
                 },
-                success: function(data) {
+                success: function (data) {
                     $.ajax({
                         url: '/notifications/' + $that.data('notify'),
                         method: 'DELETE',
