@@ -17,6 +17,7 @@ class NotificationController extends Controller
      */
     public function index()
     {
+        echo User::find(41293)->name;
         $notifications = \Auth::user()->Notifications()->orderBy('created_at', SORT_ASC)->get();
         return view('Notifications.index', compact('notifications'));
     }
