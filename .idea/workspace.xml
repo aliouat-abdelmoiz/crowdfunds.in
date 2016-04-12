@@ -74,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/Notifications/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="570">
-              <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+              <caret line="18" column="74" selection-start-line="18" selection-start-column="74" selection-end-line="18" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -93,7 +93,7 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
+            <state relative-caret-position="1793">
               <caret line="158" column="20" selection-start-line="158" selection-start-column="20" selection-end-line="158" selection-end-column="20" />
               <folding />
             </state>
@@ -525,12 +525,12 @@
       <workItem from="1460361576414" duration="681000" />
       <workItem from="1460444844726" duration="196000" />
       <workItem from="1460446255357" duration="312000" />
-      <workItem from="1460453175298" duration="1135000" />
+      <workItem from="1460453175298" duration="1219000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55422000" />
+    <option name="totallyTimeSpent" value="55506000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1002" extended-state="6" />
@@ -998,7 +998,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
+        <state relative-caret-position="1793">
           <caret line="158" column="20" selection-start-line="158" selection-start-column="20" selection-end-line="158" selection-end-column="20" />
           <folding />
         </state>
@@ -1007,7 +1007,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/Notifications/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
-          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+          <caret line="18" column="74" selection-start-line="18" selection-start-column="74" selection-end-line="18" selection-end-column="74" />
           <folding />
         </state>
       </provider>
