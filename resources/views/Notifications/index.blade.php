@@ -13,7 +13,11 @@
             <tbody>
             @if(count($notifications) > 0)
                 @foreach($notifications as $notification)
-                    
+                    <tr class="clickable {{ $notification->read == 0 ? "bold" : "blank" }} " data-link="{{ $notification->link }}" data-notify="{{ $notification->id }}">
+                        <td>{{ $notification->created_at->diffForHumans() }}</td>
+                        <td>{{ $notification->text }}</td>
+                        
+                    </tr>
                 @endforeach
             @endif
             </tbody>
