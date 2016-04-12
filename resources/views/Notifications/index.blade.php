@@ -1,5 +1,7 @@
 @extends('user')
 
+{{ dd($notifications) }}
+
 @section('main-content')
     <div class="col-md-10">
         <table class="table table-striped pages">
