@@ -59,12 +59,12 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Notifications/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
+            <state relative-caret-position="660">
+              <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
               <folding>
-                <marker date="1460455821000" expanded="true" signature="1130:1851" placeholder="..." />
-                <marker date="1460455821000" expanded="true" signature="1143:1838" placeholder="..." />
-                <marker date="1460455821000" expanded="true" signature="1463:1741" placeholder="..." />
+                <marker date="1460455923000" expanded="true" signature="1198:1919" placeholder="..." />
+                <marker date="1460455923000" expanded="true" signature="1211:1906" placeholder="..." />
+                <marker date="1460455923000" expanded="true" signature="1531:1809" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -531,12 +531,12 @@
       <workItem from="1460361576414" duration="681000" />
       <workItem from="1460444844726" duration="196000" />
       <workItem from="1460446255357" duration="312000" />
-      <workItem from="1460453175298" duration="2043000" />
+      <workItem from="1460453175298" duration="2144000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56330000" />
+    <option name="totallyTimeSpent" value="56431000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1002" extended-state="6" />
@@ -1014,12 +1014,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Notifications/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
+        <state relative-caret-position="660">
+          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
           <folding>
-            <marker date="1460455821000" expanded="true" signature="1130:1851" placeholder="..." />
-            <marker date="1460455821000" expanded="true" signature="1143:1838" placeholder="..." />
-            <marker date="1460455821000" expanded="true" signature="1463:1741" placeholder="..." />
+            <marker date="1460455923000" expanded="true" signature="1198:1919" placeholder="..." />
+            <marker date="1460455923000" expanded="true" signature="1211:1906" placeholder="..." />
+            <marker date="1460455923000" expanded="true" signature="1531:1809" placeholder="..." />
           </folding>
         </state>
       </provider>
