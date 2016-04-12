@@ -17,7 +17,7 @@
                         data-link="{{ $notification->link }}" data-notify="{{ $notification->id }}">
                         <td>{{ $notification->created_at->diffForHumans() }}</td>
                         <td>{{ $notification->text }}</td>
-                        @if(\App\User::find($notification->from) != null)
+                        @if(\App\User::find($notification->from)->name != null)
                             {{ \App\User::find($notification->from)->name }}
                         @endif
                     </tr>
