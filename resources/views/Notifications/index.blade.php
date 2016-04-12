@@ -18,7 +18,7 @@
                         <td>{{ $notification->created_at->diffForHumans() }}</td>
                         <td>{{ $notification->text }}</td>
                         @if(\App\User::find($notification->from) != null)
-                            {{ \App\User::find($notification->from)->name }}
+                            <td>{{ \App\User::find($notification->from)->name }}</td>
                         @else
                             <td>User not found.</td>
                         @endif

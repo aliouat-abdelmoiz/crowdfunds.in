@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="775ac1eb-58ac-475d-933b-d4eb06a6b666" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/NotificationController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/NotificationController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Notifications/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Notifications/index.blade.php" />
     </list>
     <ignored path="crowdfunds.in.iws" />
@@ -59,12 +60,12 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Notifications/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
+            <state relative-caret-position="600">
+              <caret line="20" column="80" selection-start-line="20" selection-start-column="80" selection-end-line="20" selection-end-column="80" />
               <folding>
-                <marker date="1460455960000" expanded="true" signature="1207:1928" placeholder="..." />
-                <marker date="1460455960000" expanded="true" signature="1220:1915" placeholder="..." />
-                <marker date="1460455960000" expanded="true" signature="1540:1818" placeholder="..." />
+                <marker date="1460456011000" expanded="true" signature="1216:1937" placeholder="..." />
+                <marker date="1460456011000" expanded="true" signature="1229:1924" placeholder="..." />
+                <marker date="1460456011000" expanded="true" signature="1549:1827" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -87,11 +88,9 @@
       <file leaf-file-name="NotificationController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/NotificationController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-              <folding>
-                <element signature="e#40#61#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="150">
+              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -531,12 +530,12 @@
       <workItem from="1460361576414" duration="681000" />
       <workItem from="1460444844726" duration="196000" />
       <workItem from="1460446255357" duration="312000" />
-      <workItem from="1460453175298" duration="2181000" />
+      <workItem from="1460453175298" duration="2232000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56468000" />
+    <option name="totallyTimeSpent" value="56519000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1002" extended-state="6" />
@@ -1004,22 +1003,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/NotificationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="e#40#61#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="150">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Notifications/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
+        <state relative-caret-position="600">
+          <caret line="20" column="80" selection-start-line="20" selection-start-column="80" selection-end-line="20" selection-end-column="80" />
           <folding>
-            <marker date="1460455960000" expanded="true" signature="1207:1928" placeholder="..." />
-            <marker date="1460455960000" expanded="true" signature="1220:1915" placeholder="..." />
-            <marker date="1460455960000" expanded="true" signature="1540:1818" placeholder="..." />
+            <marker date="1460456011000" expanded="true" signature="1216:1937" placeholder="..." />
+            <marker date="1460456011000" expanded="true" signature="1229:1924" placeholder="..." />
+            <marker date="1460456011000" expanded="true" signature="1549:1827" placeholder="..." />
           </folding>
         </state>
       </provider>
