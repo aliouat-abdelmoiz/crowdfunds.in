@@ -16,7 +16,7 @@
                     <tr class="clickable {{ $notification->read == 0 ? "bold" : "blank" }} " data-link="{{ $notification->link }}" data-notify="{{ $notification->id }}">
                         <td>{{ $notification->created_at->diffForHumans() }}</td>
                         <td>{{ $notification->text }}</td>
-                        <td>{{ DB::table('users')->where('id', '=', $notification->from)->pluck('username') or "User may removed or not set name" }}</td>
+                        <td>{{ DB::table('users')->where('id', '=', $notification->from)->get(['username'])[0] or "User may removed or not set name" }}</td>
                     </tr>
                 @endforeach
             @endif
