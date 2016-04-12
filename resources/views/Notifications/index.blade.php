@@ -1,7 +1,5 @@
 @extends('user')
 
-{{ dd($notifications) }}
-
 @section('main-content')
     <div class="col-md-10">
         <table class="table table-striped pages">
@@ -25,29 +23,4 @@
             </tbody>
         </table>
     </div>
-@endsection
-@section('script')
-    <script>
-        $(".clickable").click(function() {
-            $that = $(this);
-            $.ajax({
-                url: '/api/makereadnotify',
-                method: 'POST',
-                data: {
-                    notification_id: $that.data('notify'),
-                    _token: "{{ csrf_token() }}"
-                },
-                success: function(data) {
-                    $.ajax({
-                        url: '/notifications/' + $that.data('notify'),
-                        method: 'DELETE',
-                        data: {
-                            _token: "{{ csrf_token() }}"
-                        }
-                    });
-                    window.location.href = $that.data('link');
-                }
-            });
-        })
-    </script>
 @endsection
