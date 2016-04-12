@@ -6,14 +6,11 @@ use App\Http\Requests;
 use App\Http\Requests\AdvertiseRequest;
 use App\Notification;
 use App\Plan;
-use App\User;
 use Illuminate\Support\Facades\Input;
 use Image;
-use App\Provider;
 use Illuminate\Http\Response;
 use Stripe\Charge;
 use Stripe\Customer;
-use Symfony\Component\Finder\SplFileInfo;
 
 class AdvertiseController extends Controller
 {

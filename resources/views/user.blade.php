@@ -1,6 +1,10 @@
 @extends('app')
 @section('title')
-    {{ Auth::user()->name }} - Your Service Connection
+    @if(Auth::check())
+        {{ Auth::user()->name }} - Your Service Connection
+    @else
+        {{ \App\Provider::find(Input::get('id'))->name }}
+    @endif
 @endsection
 @section('content')
     @if(Auth::check())
