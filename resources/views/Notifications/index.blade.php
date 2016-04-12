@@ -16,7 +16,7 @@
                     <tr class="clickable {{ $notification->read == 0 ? "bold" : "blank" }} " data-link="{{ $notification->link }}" data-notify="{{ $notification->id }}">
                         <td>{{ $notification->created_at->diffForHumans() }}</td>
                         <td>{{ $notification->text }}</td>
-                        <td>{{ \App\User::whereId($notification->from)->getAttributeValue('name') or "User may removed or not set name" }}</td>
+                        <td>{{ $notification->from or "User may removed or not set name" }}</td>
                     </tr>
                 @endforeach
             @endif
