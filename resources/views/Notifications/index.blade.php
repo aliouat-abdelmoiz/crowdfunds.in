@@ -20,7 +20,7 @@
                         @if(\App\User::find($notification->from) != null)
                             {{ \App\User::find($notification->from)->name }}
                         @else
-                            User not found.
+                            <td>User not found.</td>
                         @endif
                     </tr>
                 @endforeach
