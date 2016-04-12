@@ -16,7 +16,7 @@
                     <tr class="clickable {{ $notification->read == 0 ? "bold" : "blank" }} " data-link="{{ $notification->link }}" data-notify="{{ $notification->id }}">
                         <td>{{ $notification->created_at->diffForHumans() }}</td>
                         <td>{{ $notification->text }}</td>
-                        <td>{{ \App\User::find($notification->from)->email }}</td>
+                        <td>{{ \App\User::find($notification->from)->name }}</td>
                     </tr>
                 @endforeach
             @endif
