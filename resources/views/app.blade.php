@@ -88,7 +88,7 @@
         </div>
     </div>
     <section class="row panel">
-        <article class="col-lg-4 no-margin no-padding">
+        <article class="col-sm-4 no-margin no-padding">
             @if(Auth::guest())
                 <i class="fa fa-lock red"><span class="text">Not logged in</span></i>
             @else
@@ -100,12 +100,12 @@
             @endif
         </article>
         @if(Auth::guest())
-            <article class="col-md-8 text-right no-padding">
+            <article class="col-md-8 hidden-sm hidden-xs text-right no-padding">
                 <i class="fa fa-external-link-square no-margin"><span class="text"><a
                                 href="/auth/login">Login</a></span></i>
             </article>
         @else
-            <article class="col-md-8 text-right no-padding">
+            <article class="col-md-8 hidden-sm hidden-xs text-right no-padding">
                 <i class="fa fa-external-link-square"><span class="text"><a
                                 href="/auth/logout">Logout</a></span></i>
                 <i class="fa fa-key"><span class="text"><a

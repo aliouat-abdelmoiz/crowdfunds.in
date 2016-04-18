@@ -17,6 +17,10 @@ body {
     padding: 0;
 }
 
+.navbar-toggle .icon-bar {
+    background: #FFFFFF;
+}
+
 /* Custom container */
 .container-fixed {
     margin: 0 auto;
@@ -1419,6 +1423,12 @@ ul.autocomplete-list li em {
 .done-box a {
     margin: 20px auto;
     color: #c792ea;
+}
+
+@media (max-width: 767px) {
+    .dropdown-menu > li > a {
+        color: white;
+    }
 }
 /*
  * easy-autocomplete
