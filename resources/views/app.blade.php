@@ -27,7 +27,7 @@
     Loading...
 </div>
 <div id="example"></div>
-<figure class="jumbotron container-fixed">
+<figure class="jumbotron container">
     <section class="container">
         <header class="navbar bs-docs-nav" role="banner">
             <div class="container">
@@ -119,7 +119,7 @@
     </section>
     @yield('content')
 </div>
-<footer class="panel-footer footer container-fixed">
+<footer class="panel-footer footer container">
     <div class="container footer-links">
         <figure class="row">
             <section class="col-md-3">
