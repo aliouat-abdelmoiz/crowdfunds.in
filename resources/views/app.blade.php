@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>@yield('title')</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Your service connection - @yield('description')">
     <link rel="canonical" href="http://crowdfunds.in/page/@yield('canonical')"/>
     <meta name="ROBOTS" content="INDEX, FOLLOW">
