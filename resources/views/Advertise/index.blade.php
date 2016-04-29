@@ -17,6 +17,7 @@
         {!! Form::hidden('plan_name', Input::get('plan_name')) !!}
         {!! Form::hidden('clicks', Input::get('clicks')) !!}
         {!! Form::hidden('amount', Input::get('amount')) !!}
+        {!! Form::hidden('auto_renew', Input::get('auto_renew')) !!}
 
         {!! Form::text('title', null, ['placeholder' => 'Title', 'class' => 'form-control', 'required']) !!}
         <br>

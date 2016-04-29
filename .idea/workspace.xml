@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="775ac1eb-58ac-475d-933b-d4eb06a6b666" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Advertise/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Advertise/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/partial/profile/edit-profile.blade.php" afterPath="$PROJECT_DIR$/resources/views/partial/profile/edit-profile.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/partial/profile/new-profile.blade.php" afterPath="$PROJECT_DIR$/resources/views/partial/profile/new-profile.blade.php" />
     </list>
     <ignored path="crowdfunds.in.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,102 +59,29 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Advertise/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+            <state relative-caret-position="-1716">
+              <caret line="19" column="68" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/profile/show.blade.php">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/Plan/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
-              <folding>
-                <marker date="1460133727000" expanded="true" signature="245:364" placeholder="..." />
-                <marker date="1460133727000" expanded="true" signature="1108:1361" placeholder="..." />
-                <marker date="1460133727000" expanded="true" signature="3948:3960" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit-profile.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/partial/profile/edit-profile.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="14" column="74" selection-start-line="14" selection-start-column="74" selection-end-line="14" selection-end-column="74" />
-              <folding>
-                <marker date="1461907461000" expanded="true" signature="407:605" placeholder="..." />
-                <marker date="1461907461000" expanded="true" signature="421:603" placeholder="..." />
-                <marker date="1461907461000" expanded="true" signature="567:602" placeholder="..." />
-                <marker date="1461907461000" expanded="true" signature="1550:1685" placeholder="..." />
-                <marker date="1461907461000" expanded="true" signature="1563:1683" placeholder="..." />
-                <marker date="1461907461000" expanded="true" signature="1653:1682" placeholder="..." />
-                <marker date="1461907461000" expanded="true" signature="2521:2707" placeholder="..." />
-                <marker date="1461907461000" expanded="true" signature="2534:2705" placeholder="..." />
-                <marker date="1461907461000" expanded="true" signature="2632:2704" placeholder="..." />
-                <marker date="1461907461000" expanded="true" signature="2718:2917" placeholder="..." />
-                <marker date="1461907461000" expanded="true" signature="2731:2915" placeholder="..." />
-                <marker date="1461907461000" expanded="true" signature="2839:2914" placeholder="..." />
-                <marker date="1461907461000" expanded="true" signature="2928:3065" placeholder="..." />
-                <marker date="1461907461000" expanded="true" signature="2942:3063" placeholder="..." />
-                <marker date="1461907461000" expanded="true" signature="3024:3062" placeholder="..." />
-                <marker date="1461907461000" expanded="true" signature="3076:3222" placeholder="..." />
-                <marker date="1461907461000" expanded="true" signature="3090:3220" placeholder="..." />
-                <marker date="1461907461000" expanded="true" signature="3182:3219" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new-profile.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/partial/profile/new-profile.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="5" column="85" selection-start-line="5" selection-start-column="85" selection-end-line="5" selection-end-column="85" />
-              <folding>
-                <marker date="1461907484000" expanded="true" signature="196:320" placeholder="..." />
-                <marker date="1461907484000" expanded="true" signature="210:318" placeholder="..." />
-                <marker date="1461907484000" expanded="true" signature="282:317" placeholder="..." />
-                <marker date="1461907484000" expanded="true" signature="1887:2073" placeholder="..." />
-                <marker date="1461907484000" expanded="true" signature="1900:2071" placeholder="..." />
-                <marker date="1461907484000" expanded="true" signature="1998:2070" placeholder="..." />
-                <marker date="1461907484000" expanded="true" signature="2084:2283" placeholder="..." />
-                <marker date="1461907484000" expanded="true" signature="2097:2281" placeholder="..." />
-                <marker date="1461907484000" expanded="true" signature="2205:2280" placeholder="..." />
-                <marker date="1461907484000" expanded="true" signature="2294:2431" placeholder="..." />
-                <marker date="1461907484000" expanded="true" signature="2308:2429" placeholder="..." />
-                <marker date="1461907484000" expanded="true" signature="2390:2428" placeholder="..." />
-                <marker date="1461907484000" expanded="true" signature="2442:2588" placeholder="..." />
-                <marker date="1461907484000" expanded="true" signature="2456:2586" placeholder="..." />
-                <marker date="1461907484000" expanded="true" signature="2548:2585" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Advertise/admin.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Advertise/edit.blade.php">
+      <file leaf-file-name="AdvertiseController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdvertiseController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-              <folding>
-                <marker date="1461907170000" expanded="true" signature="1446:1606" placeholder="..." />
-                <marker date="1461907170000" expanded="true" signature="1460:1604" placeholder="..." />
-                <marker date="1461907170000" expanded="true" signature="1470:1543" placeholder="..." />
-              </folding>
+            <state relative-caret-position="600">
+              <caret line="159" column="65" selection-start-line="159" selection-start-column="65" selection-end-line="159" selection-end-column="65" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -195,7 +120,6 @@
         <option value="$PROJECT_DIR$/config/mail.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Profile.php" />
         <option value="$PROJECT_DIR$/resources/views/partial/js/Plan/plan.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Plan/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Plan/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Console/Commands/SendJobConsole.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php" />
@@ -222,9 +146,10 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api.php" />
         <option value="$PROJECT_DIR$/public/lib/premium.phtml" />
         <option value="$PROJECT_DIR$/resources/views/Advertise/edit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Advertise/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/partial/profile/edit-profile.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/partial/profile/new-profile.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Advertise/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Plan/index.blade.php" />
       </list>
     </option>
   </component>
@@ -372,7 +297,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="profile" />
+              <option name="myItemId" value="Plan" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -394,7 +319,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="partial" />
+              <option name="myItemId" value="Advertise" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -411,16 +336,18 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="crowdfunds.in" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crowdfunds.in" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="partial" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="profile" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -434,7 +361,33 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crowdfunds.in" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crowdfunds.in" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -597,20 +550,20 @@
       <workItem from="1461674693538" duration="407000" />
       <workItem from="1461691453767" duration="2000" />
       <workItem from="1461834469482" duration="489000" />
-      <workItem from="1461905585724" duration="1331000" />
+      <workItem from="1461905585724" duration="1504000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63699000" />
+    <option name="totallyTimeSpent" value="63872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1002" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.165625" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15833333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15833333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14322917" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -691,13 +644,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendJobConsole.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -814,13 +760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
           <caret line="69" column="48" selection-start-line="69" selection-start-column="48" selection-end-line="69" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdvertiseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9210">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1036,22 +975,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Advertise/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/partial/profile/new-profile.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/profile/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+        <state relative-caret-position="150">
+          <caret line="5" column="85" selection-start-line="5" selection-start-column="85" selection-end-line="5" selection-end-column="85" />
           <folding>
-            <marker date="1460133727000" expanded="true" signature="245:364" placeholder="..." />
-            <marker date="1460133727000" expanded="true" signature="1108:1361" placeholder="..." />
-            <marker date="1460133727000" expanded="true" signature="3948:3960" placeholder="..." />
+            <marker date="1461907484000" expanded="true" signature="196:320" placeholder="..." />
+            <marker date="1461907484000" expanded="true" signature="210:318" placeholder="..." />
+            <marker date="1461907484000" expanded="true" signature="282:317" placeholder="..." />
+            <marker date="1461907484000" expanded="true" signature="1887:2073" placeholder="..." />
+            <marker date="1461907484000" expanded="true" signature="1900:2071" placeholder="..." />
+            <marker date="1461907484000" expanded="true" signature="1998:2070" placeholder="..." />
+            <marker date="1461907484000" expanded="true" signature="2084:2283" placeholder="..." />
+            <marker date="1461907484000" expanded="true" signature="2097:2281" placeholder="..." />
+            <marker date="1461907484000" expanded="true" signature="2205:2280" placeholder="..." />
+            <marker date="1461907484000" expanded="true" signature="2294:2431" placeholder="..." />
+            <marker date="1461907484000" expanded="true" signature="2308:2429" placeholder="..." />
+            <marker date="1461907484000" expanded="true" signature="2390:2428" placeholder="..." />
+            <marker date="1461907484000" expanded="true" signature="2442:2588" placeholder="..." />
+            <marker date="1461907484000" expanded="true" signature="2456:2586" placeholder="..." />
+            <marker date="1461907484000" expanded="true" signature="2548:2585" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1083,27 +1026,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partial/profile/new-profile.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/profile/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="85" selection-start-line="5" selection-start-column="85" selection-end-line="5" selection-end-column="85" />
+        <state relative-caret-position="444">
+          <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
           <folding>
-            <marker date="1461907484000" expanded="true" signature="196:320" placeholder="..." />
-            <marker date="1461907484000" expanded="true" signature="210:318" placeholder="..." />
-            <marker date="1461907484000" expanded="true" signature="282:317" placeholder="..." />
-            <marker date="1461907484000" expanded="true" signature="1887:2073" placeholder="..." />
-            <marker date="1461907484000" expanded="true" signature="1900:2071" placeholder="..." />
-            <marker date="1461907484000" expanded="true" signature="1998:2070" placeholder="..." />
-            <marker date="1461907484000" expanded="true" signature="2084:2283" placeholder="..." />
-            <marker date="1461907484000" expanded="true" signature="2097:2281" placeholder="..." />
-            <marker date="1461907484000" expanded="true" signature="2205:2280" placeholder="..." />
-            <marker date="1461907484000" expanded="true" signature="2294:2431" placeholder="..." />
-            <marker date="1461907484000" expanded="true" signature="2308:2429" placeholder="..." />
-            <marker date="1461907484000" expanded="true" signature="2390:2428" placeholder="..." />
-            <marker date="1461907484000" expanded="true" signature="2442:2588" placeholder="..." />
-            <marker date="1461907484000" expanded="true" signature="2456:2586" placeholder="..." />
-            <marker date="1461907484000" expanded="true" signature="2548:2585" placeholder="..." />
+            <marker date="1460133727000" expanded="true" signature="245:364" placeholder="..." />
+            <marker date="1460133727000" expanded="true" signature="1108:1361" placeholder="..." />
+            <marker date="1460133727000" expanded="true" signature="3948:3960" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdvertiseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="159" column="65" selection-start-line="159" selection-start-column="65" selection-end-line="159" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Advertise/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1716">
+          <caret line="19" column="68" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Plan/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
