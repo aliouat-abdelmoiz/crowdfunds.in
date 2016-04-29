@@ -26,7 +26,7 @@
         <br>
         <b><p>Select Advertise Range - With selected range your advertise show users providing service in range.</p></b>
         {!! Form::select('range', [
-        'city' => 'City Wide', 'state' => 'State Wide', 'Custom Range'
+        'city' => 'City Wide', 'state' => 'State Wide', 'Miles'
         ], 1, ['class' => 'form-control add-margin', 'id' => 'range']) !!}
         <input type="number" placeholder="Enter Own Range" name="custom_range"
                class="form-control add-margin custom_range">

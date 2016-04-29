@@ -24,7 +24,9 @@
         <br>
         @if(Auth::user()->provider->logo != null || Auth::user()->provider->logo != "")
             <h3>Current Logo</h3>
-            <img src="/uploads/users/logos/{{ Auth::user()->provider->logo == "" ? Auth::user()->avatar : Auth::user()->provider->logo }}" alt="">
+            <img src="/uploads/users/logos/{{ Auth::user()->provider->logo == "" ? Auth::user()->avatar : Auth::user()->provider->logo }}"
+                 alt="">
+            {!! Form::file('images[]', ['multiple' => true, 'class' => 'form-control']) !!}
         @else
             {!! Form::file('images[]', ['multiple' => true, 'class' => 'form-control']) !!}
         @endif
