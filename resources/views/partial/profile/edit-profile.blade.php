@@ -10,9 +10,9 @@
     {!! Form::input('text', 'name', Auth::user()->provider->name , ['class' => 'form-control']) !!}
 </figure>
 <figure class="form-group">
-    {!! Form::select('range', ['state' => 'State Wide', 'city' => 'City Wide', 'In Range'], !intval(\Auth::user()->provider->range) ? Auth::user()->provider->range : 0, ['class' =>
+    {!! Form::select('range', ['state' => 'State Wide', 'city' => 'City Wide', 'Miles'], !intval(\Auth::user()->provider->range) ? Auth::user()->provider->range : 0, ['class' =>
     'form-control range']) !!}
-    <label class="add-margin" for="rangeValue" id="customRangeLabel">Custom Range :</label>
+    <label class="add-margin" for="rangeValue" id="customRangeLabel">Miles :</label>
     {!! Form::input('number','rangeValue', Auth::user()->provider->range, ['class' => 'form-control rangeValue', 'placeholder' => 'Enter range in miles']) !!}
 </figure>
 <figure class="form-group">

@@ -3,9 +3,9 @@
     {!! Form::input('text', 'name', null , ['class' => 'form-control']) !!}
 </figure>
 <figure class="form-group">
-    {!! Form::select('range', ['state' => 'State Wide', 'city' => 'City Wide', 'In Range'], 2, ['class' =>
+    {!! Form::select('range', ['state' => 'State Wide', 'city' => 'City Wide', 'Miles'], 2, ['class' =>
     'form-control range']) !!}
-    <label class="add-margin" for="rangeValue" id="customRangeLabel">Custom Range :</label>
+    <label class="add-margin" for="rangeValue" id="customRangeLabel">Miles :</label>
     {!! Form::input('number','rangeValue', null, ['class' => 'form-control rangeValue']) !!}
 </figure>
 <figure class="form-group">

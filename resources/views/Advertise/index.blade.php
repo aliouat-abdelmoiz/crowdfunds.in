@@ -26,8 +26,10 @@
             <h3>Current Logo</h3>
             <img src="/uploads/users/logos/{{ Auth::user()->provider->logo == "" ? Auth::user()->avatar : Auth::user()->provider->logo }}"
                  alt="">
+            <h4>Select Other Image</h4>
             {!! Form::file('images[]', ['multiple' => true, 'class' => 'form-control']) !!}
         @else
+            <h4>Select Other Image</h4>
             {!! Form::file('images[]', ['multiple' => true, 'class' => 'form-control']) !!}
         @endif
         <select name="categories" id="category" class="form-control add-margin" required>
