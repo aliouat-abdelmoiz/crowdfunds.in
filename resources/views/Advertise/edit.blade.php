@@ -81,7 +81,7 @@
                         var x = JSON.parse(result);
                         $("#subcategory").html("");
                         $.each(x, function (key, value) {
-                            $("#subcategory").append("<option value=" + value.id + ">" + value.name + "</option>");
+                            $("#subcategory").append("<option selected='selected' value=" + value.id + ">" + value.name + "</option>");
                             $('#subcategory').multipleSelect();
                         });
                     }
