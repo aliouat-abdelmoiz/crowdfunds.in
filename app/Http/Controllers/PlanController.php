@@ -143,7 +143,7 @@ class PlanController extends Controller
                 \Auth::user()->save();
             }
             else {
-                return \Redirect::to('/premium');
+                return \Redirect::to('/premium')->withInput(['auto_renew' => \Input::get('auto_renew')]);
             }
         }
     }
