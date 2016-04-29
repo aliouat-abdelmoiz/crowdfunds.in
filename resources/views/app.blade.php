@@ -53,6 +53,7 @@
                                     Account
                                 @endif
                                 <b class="caret"></b></a>
+
                             <ul class="dropdown-menu">
                                 @if(Auth::guest())
                                     <li><a href="/auth/login">Login</a></li>
@@ -77,11 +78,47 @@
                     </ul>
                 </nav>
             </div>
+
         </header>
         @yield('banner');
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Place this tag in your head or just before your close body tag. -->
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <!-- yourserviceconnection -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8637984357942481"
+             data-ad-slot="6327224655"
+             data-ad-format="auto"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
     </section>
 </figure>
 <div class="container bodycontainer" id="bodycontainer">
+    <br>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="g-plusone" data-size="tall" data-annotation="inline" data-width="300"></div>
+        </div>
+        <div class="col-md-3">
+            <div class="fb-like" data-href="https://facebook.com/yourserviceconnection.com" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
+        </div>
+        <div class="col-md-3">
+            <a href="https://twitter.com/ursvcconnection" class="twitter-follow-button" data-show-count="true">Follow @ursvcconnection</a>
+        </div>
+        <div class="col-md-2">
+            <style>.ig-b- { display: inline-block; }
+                .ig-b- img { visibility: hidden; }
+                .ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
+                .ig-b-v-24 { width: 137px; height: 24px; background: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24.png) no-repeat 0 0; }
+                @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+                    .ig-b-v-24 { background-image: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24@2x.png); background-size: 160px 178px; } }</style>
+            <a href="https://www.instagram.com/yourserviceconnection/?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
+        </div>
+
+    </div>
     <div id="search-app">
         <div class="inner-addon left-addon">
             <input type="text" data-provide="typeahead" name="query" value="{{ Input::old('query') }}" id="search"
@@ -89,6 +126,7 @@
         </div>
     </div>
     <section class="row panel">
+
         <article class="col-sm-4 no-margin no-padding">
             @if(Auth::guest())
                 <i class="fa fa-lock red"><span class="text">Not logged in</span></i>
@@ -118,6 +156,7 @@
             </article>
         @endif
     </section>
+
     @yield('content')
 </div>
 <footer class="panel-footer footer container">
@@ -187,9 +226,21 @@
 <?php include(public_path('/lib/premium.phtml')) ?>
 @include('partial.notify')
 @yield('script')
-@if(Auth::check())
 
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=516593308512917";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+@if(Auth::check())
     <script>
+
 
         var source = new EventSource("/messages");
         source.onmessage = function (event) {
