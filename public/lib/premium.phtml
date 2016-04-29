@@ -26,6 +26,7 @@
     }
 
     $("document").ready(function () {
+                
         $.ajax({
             url: '/api/premium',
             success: function (data) {
@@ -35,6 +36,7 @@
                         data: { cat_value: value.categories, sub_cats: value.subcategories },
                         success: function (data) {
                             var subcat_id = adRotate(data.subcats);
+                            console.log(data.subcats);
                             $.ajax({
                                 url: '/api/category_name/' + data.cat,
                                 async: false,

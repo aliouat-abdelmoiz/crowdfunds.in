@@ -448,7 +448,7 @@ class Api extends Controller
 
     public function decode()
     {
-        $cats = json_decode(unserialize(\Input::get('cat_value')));
+        $cats = json_decode(\Input::get('cat_value'));
         $subcats = json_decode(unserialize(\Input::get('sub_cats')));
         return \Response::make(["cat" => $cats, "subcats" => $subcats]);
     }
