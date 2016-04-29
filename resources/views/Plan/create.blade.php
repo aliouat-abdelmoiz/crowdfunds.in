@@ -2,9 +2,10 @@
 @section('main-content')
     <div class="col-md-10 col-lg-push-1" id="plans">
         <h3>Our Plans</h3>
-        <p class="auto-renew"><input type="checkbox" checked id="auto_renew" name="auto_renew" value="0"> Yes i would
-            like to auto renew this plan.</p>
+
         <form action="{{ URL::route('premium.index') }}" method="get">
+            <p class="auto-renew"><input type="checkbox" checked id="auto_renew" name="auto_renew" value="1"> Yes i would
+                like to auto renew this plan.</p>
             <div class="plan plan1">
                 <h5>Basic Package</h5>
                 <h4>Dollar</h4>

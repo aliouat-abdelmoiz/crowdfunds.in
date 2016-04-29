@@ -1,12 +1,5 @@
 <script>
     $("document").ready(function () {
-        $("#auto_renew").click(function () {
-            if ($(this).is(':checked')) {
-                $(this).val(1);
-            } else {
-                $(this).val(0);
-            }
-        });
         $(".buy_plan").click(function () {
             $(this).html('<span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Don\'t Refresh Window');
             var plan = $(this).attr('plan');

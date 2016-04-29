@@ -6,10 +6,13 @@
     <div class="col-md-10 col-lg-push-1">
         <h3>Our Plans</h3>
 
-        <p class="auto-renew"><input type="checkbox" id="auto_renew" checked="checked" name="auto_renew" value="1"> Yes i would
-            like to auto renew this plan.</p>
+
         @if(Auth::user()->card_id == "" || empty(Auth::user()->card_id))
             <form action="/plan/checkout" method="post"></form>
+            <p class="auto-renew">
+                <input type="checkbox" id="auto_renew" checked="checked" name="auto_renew" value="1">
+                Yes i would like to auto renew this plan.
+            </p>
             <div class="plan plan1">
                 <h5>Basic Package</h5>
                 <h4>Dollar</h4>
@@ -64,6 +67,8 @@
                 </button>
             </div>
         @else
+            <p class="auto-renew"><input type="checkbox" id="auto_renew" checked="checked" name="auto_renew" value="1"> Yes i would
+                like to auto renew this plan.</p>
             <div class="plan plan1">
                 <h5>Basic Package</h5>
                 <h4>Dollar</h4>
@@ -125,8 +130,6 @@
     @if(Session::has('customer_id'))
         <script>
 
-
-
             @if(Session::has("customer_id"))
 
             $(".yes").html('<span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Don\'t Refresh Window');
@@ -160,51 +163,6 @@
     @endif
 
     @if(Auth::user()->card_id == "" || empty(Auth::user()->card_id))
-        {{--<h3>Please Verify Your Credit Card.</h3>--}}
-        {{--<form action="/plan/checkout" method="POST">--}}
-        {{--<script--}}
-        {{--src="https://checkout.stripe.com/checkout.js" class="stripe-button"--}}
-        {{--data-key="pk_test_Rh54FuBpoz5Bvhu6yznIrhcm"--}}
-        {{--data-image="/img/documentation/checkout/marketplace.png"--}}
-        {{--data-name="Your Service Connection"--}}
-        {{--data-description="No Amount Detect"--}}
-        {{--data-amount=0--}}
-        {{--data-locale="auto">--}}
-        {{--</script>--}}
-        {{--{!! Form::token() !!}--}}
-        {{--</form>--}}
-
-
-        {{--<h3><span class="glyphicon glyphicon-ok"></span> Credit Card Verified</h3>--}}
-        {{--<section class="col-md-3 plan-1 plans">--}}
-        {{--<h3>Basic Package</h3>--}}
-
-        {{--<p>$4.99</p>--}}
-
-        {{--<p>Your logo on the Category and Sub Category Page(random) 20 Impressions or clicks.</p>--}}
-
-        {{--</section>--}}
-        {{--<section class="col-md-4 plan-2 plans">--}}
-        {{--<h3>Most Popular</h3>--}}
-
-        {{--<p>$9.99</p>--}}
-
-        {{--<p>Your logo on the Category and Sub Category Page(random) 50 Impressions or Clicks.</p>--}}
-        {{--</section>--}}
-        {{--<section class="col-md-3 plan-3 plans">--}}
-        {{--<h3>Best Deal</h3>--}}
-
-        {{--<p>$24.99</p>--}}
-
-        {{--<p>Your logo on the Category and Sub Category Page(random) 150 Impressions or Clicks.</p>--}}
-        {{--</section>--}}
-
-        {{--<div class="row">--}}
-        {{--<button class="btn btn-success plans add-margin" id="customButton" data-plan="1" plan="basic">Buy--}}
-        {{--</button>--}}
-        {{--<p>Yes i would like to auto renew this plan <input type="checkbox" id="auto_renew" name="auto_renew"--}}
-        {{--value="0"></p>--}}
-        {{--</div>--}}
 
     @endif
 @endsection

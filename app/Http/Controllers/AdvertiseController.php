@@ -29,7 +29,6 @@ class AdvertiseController extends Controller
 
                 $categories = \DB::table('categories')->whereIn('id', $search_categories)->get(['id', 'name']);
                 $subcategories = \DB::table('subcategories')->whereIn('id', $search_subcategories)->get(['id', 'name']);
-
                 return view('Advertise.index', compact('categories', 'subcategories'));
             } else {
                 return \Redirect::to('/plan/show');
