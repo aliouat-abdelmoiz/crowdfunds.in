@@ -222,7 +222,6 @@ class Api extends Controller
 
             \Mail::send('emails.hire', ['project' => $project->title, 'user' => \Auth::user()->name],
                 function ($message) use ($project_id, $user_email, $pro, $project) {
-                    $message->from(\Auth::user()->email);
                     $message->replyTo(\Auth::user()->email, 'Reply Me');
                     $message->to($user_email)->subject('You hired by ' . \Auth::user()->email);
 

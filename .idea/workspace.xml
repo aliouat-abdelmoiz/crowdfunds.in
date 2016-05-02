@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="775ac1eb-58ac-475d-933b-d4eb06a6b666" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Api.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/MessageController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/MessageController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/messages/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/messages/show.blade.php" />
     </list>
     <ignored path="crowdfunds.in.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,13 +69,13 @@
       <file leaf-file-name="Api.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="341" column="57" selection-start-line="341" selection-start-column="57" selection-end-line="341" selection-end-column="57" />
+            <state relative-caret-position="551">
+              <caret line="223" column="84" selection-start-line="223" selection-start-column="84" selection-end-line="223" selection-end-column="84" />
               <folding>
-                <marker date="1462183792000" expanded="true" signature="1086:2079" placeholder="SELECT plans... adv__managements" />
-                <marker date="1462183792000" expanded="true" signature="2233:3369" placeholder="SELECT plans... adv__managements" />
-                <marker date="1462183792000" expanded="true" signature="5566:6151" placeholder="SELECT proje... provider_client" />
-                <marker date="1462183792000" expanded="true" signature="12451:12544" placeholder="SELECT total... conversation_user" />
+                <marker date="1462184043000" expanded="true" signature="1086:2079" placeholder="SELECT plans... adv__managements" />
+                <marker date="1462184043000" expanded="true" signature="2233:3369" placeholder="SELECT plans... adv__managements" />
+                <marker date="1462184043000" expanded="true" signature="5566:6151" placeholder="SELECT proje... provider_client" />
+                <marker date="1462184043000" expanded="true" signature="12393:12486" placeholder="SELECT total... conversation_user" />
               </folding>
             </state>
           </provider>
@@ -519,12 +515,12 @@
       <workItem from="1461956945930" duration="2626000" />
       <workItem from="1462103017997" duration="800000" />
       <workItem from="1462171371092" duration="452000" />
-      <workItem from="1462181646249" duration="1593000" />
+      <workItem from="1462181646249" duration="1665000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70482000" />
+    <option name="totallyTimeSpent" value="70554000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="989" extended-state="6" />
@@ -991,13 +987,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="341" column="57" selection-start-line="341" selection-start-column="57" selection-end-line="341" selection-end-column="57" />
+        <state relative-caret-position="551">
+          <caret line="223" column="84" selection-start-line="223" selection-start-column="84" selection-end-line="223" selection-end-column="84" />
           <folding>
-            <marker date="1462183792000" expanded="true" signature="1086:2079" placeholder="SELECT plans... adv__managements" />
-            <marker date="1462183792000" expanded="true" signature="2233:3369" placeholder="SELECT plans... adv__managements" />
-            <marker date="1462183792000" expanded="true" signature="5566:6151" placeholder="SELECT proje... provider_client" />
-            <marker date="1462183792000" expanded="true" signature="12451:12544" placeholder="SELECT total... conversation_user" />
+            <marker date="1462184043000" expanded="true" signature="1086:2079" placeholder="SELECT plans... adv__managements" />
+            <marker date="1462184043000" expanded="true" signature="2233:3369" placeholder="SELECT plans... adv__managements" />
+            <marker date="1462184043000" expanded="true" signature="5566:6151" placeholder="SELECT proje... provider_client" />
+            <marker date="1462184043000" expanded="true" signature="12393:12486" placeholder="SELECT total... conversation_user" />
           </folding>
         </state>
       </provider>
