@@ -118,6 +118,13 @@
             <a href="https://www.instagram.com/yourserviceconnection/?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
         </div>
 
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8637984357942481"
+             data-ad-slot="6327224655"
+             data-ad-format="auto"></ins>
+
+
     </div>
     <div id="search-app">
         <div class="inner-addon left-addon">
@@ -237,6 +244,7 @@
         js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=516593308512917";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 @if(Auth::check())
     <script>

@@ -281,7 +281,7 @@ class Api extends Controller
 
                     \Mail::send('emails.job-notifcation',
                         [Project::find(Input::get('project_id'))->title, Input::get('content')],
-                        function ($message) use ($select_provider) {
+                        function ($message) {
                             $message->to(User::find(Project::find(Input::get('project_id'))->user_id)->email)->subject('Job Applied');
                             Notification::create([
                                 'text' => \Auth::user()->email . ' Applied for job ' . Project::find(Input::get('project_id'))->title,
@@ -340,7 +340,6 @@ class Api extends Controller
             if ($message->save()) {
                 \Mail::send('emails.new-message', ['content' => \Input::get('content'), 'user' => $username[0]->name],
                     function ($message) use ($username) {
-                        $message->from(\Auth::user()->email);
                         $message->replyTo(\Auth::user()->email, 'Reply Me');
                         $message->to($username[0]->email)->subject('New Message from ' . \Auth::user()->email);
                     });

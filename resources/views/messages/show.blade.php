@@ -23,14 +23,9 @@
                             </div>
                             <div class="message-section">
                                 <a href="#message"><h5>{{ $message->user->name }}</h5></a>
-
                                 <p id="message-{{ $message->id }}">{{ $message->content }}</p>
                                 <small><p class="pull-left">Sent
                                         by {{ $message->user->name }} {{ $message->created_at->diffForHumans() }}</p>
-                                    {{--{!! Form::open(array('method'=>'DELETE', 'route'=>array('message.destroy',--}}
-                                    {{--$message->id))) !!}--}}
-                                    {{--{!! Form::submit('Delete', ['class' => 'btn btn-link pull-right']) !!}--}}
-                                    {{--{!! Form::close() !!}--}}
                                 </small>
                             </div>
                         </li>

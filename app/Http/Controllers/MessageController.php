@@ -23,7 +23,7 @@ class MessageController extends Controller
     public function index()
     {
         $user = User::find(\Auth::id());
-        $conversations = $user->conversations()->withPivot('opened')->simplePaginate(10);
+        $conversations = $user->conversations()->withPivot('opened')->orderBy('created_at', 'desc')->simplePaginate(10);
         return view('messages.index', compact('conversations', 'user'));
     }
 
