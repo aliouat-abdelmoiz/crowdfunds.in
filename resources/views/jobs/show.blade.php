@@ -87,7 +87,7 @@
                             <a href="/message">Messages</a>
                             &nbsp;<span class="low-opacity">|</span>&nbsp;
                             {!! $project->ended == 0 ? '<a data-project="' . $project->id . '" data-provider="' . $project->provider_id . '"
-                            class="endContract" href="#">End Contract</a>' : '<p><div class="endedRate" id="' . $project->id . '" data-score="' . $project->feedback . '" data-project="' . $project->id . '"></div></p>' !!}
+                            class="endContract" href="#">End Contract</a>' : '<p><div class="endedRate" id="' . $project->id . '" data-score="' . $project->feedback . '" data-project="' . $project->id . '" ></div></p>' !!}
                         </p>
                     </li>
                 @endif

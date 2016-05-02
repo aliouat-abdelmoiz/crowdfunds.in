@@ -60,8 +60,7 @@ function hire(project_id, provider_id) {
     })
 }
 
-function endContract(e) {
-    e.preventDefault();
+function endContract() {
     inst.open();
     $.ajax({
         url: '/jobs/end',
@@ -78,9 +77,8 @@ function endContract(e) {
                 type: "success",
                 showCancelButton: false,
                 closeOnConfirm: false
-            }, function () {
-                window.location.reload();
             });
+            window.location.reload();
         }
     });
 }
