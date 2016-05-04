@@ -98,7 +98,7 @@
                     },
                     complete: function () {
                         swal({
-                            title: "Job Applied",
+                            title: "Thank you for applying",
                             text: "Contact us if any problem",
                             type: "success",
                             showCancelButton: false,

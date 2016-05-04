@@ -281,7 +281,7 @@ class Api extends Controller
                     \Mail::send('emails.job-notifcation',
                         [Project::find(Input::get('project_id'))->title, Input::get('content')],
                         function ($message) {
-                            $message->to(User::find(Project::find(Input::get('project_id'))->user_id)->email)->subject('Job Applied');
+                            $message->to(User::find(Project::find(Input::get('project_id'))->user_id)->email)->subject('Thank you for applying');
                             Notification::create([
                                 'text' => \Auth::user()->email . ' Applied for job ' . Project::find(Input::get('project_id'))->title,
                                 'link' => '/jobs/show/' . Input::get('project_id'),
