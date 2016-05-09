@@ -13,7 +13,6 @@
 
 use App\User;
 
-
 // counters
 
 Route::get("/page/{name}", 'PageController@page');

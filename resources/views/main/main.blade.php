@@ -19,6 +19,9 @@
     @endif
     {!! $cats->render() !!}
     <section class="row add-margin" id="categories">
+        <article class="col-md-3 hidden-lg hidden-md advertise">
+            <h4>Advertise</h4>
+        </article>
         <article class="col-md-9 no-margin pages">
             <h4 class="heading">Site Categories</h4>
             <ul class="item-new row">

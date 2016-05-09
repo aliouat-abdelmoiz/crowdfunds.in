@@ -103,7 +103,7 @@
             <div class="g-plusone" data-size="tall" data-annotation="inline" data-width="300"></div>
         </div>
         <div class="col-md-3">
-            <div class="fb-like" data-href="https://facebook.com/yourserviceconnection.com" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
+            <div class="fb-like" data-href="https://facebook.com/yourserviceconnection.com" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
         </div>
         <div class="col-md-3">
             <a href="https://twitter.com/ursvcconnection" class="twitter-follow-button" data-show-count="true">Follow @ursvcconnection</a>
