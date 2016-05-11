@@ -29,9 +29,7 @@
                     @foreach($cat as $category)
                         <li class="col-md-4 pageitem">
                             <a href="/Items/{{$category->name}}/{{ $category->id }}">
-                                <img id="cat{{ $category->id }}" onerror="imgError(this)" class="thumbimg no-margin"
-                                     src="{{ \App\Category::GetPrimaryUserPic($category->id) == "not" ? "https://admin.yourserviceconnection.com/upload/categories/images/thumbs/$category->image" : \App\Category::GetPrimaryUserPic($category->id) }}"
-                                     alt="{{ $category->name }}"/>
+                                
                             </a>
                             <p class="categories-subcategories-margin">{{ str_limit($category->name, 30) }}</p>
                             <a href="#" class="readmore categories-subcategories-margin">Read More...</a>
