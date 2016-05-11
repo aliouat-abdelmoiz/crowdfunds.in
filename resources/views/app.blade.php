@@ -5,12 +5,12 @@
     <title>@yield('title')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Your service connection - @yield('description')">
-    <link rel="canonical" href="http://crowdfunds.in/page/@yield('canonical')"/>
+    <link rel="canonical" href="https://crowdfunds.in/page/@yield('canonical')"/>
     <meta name="ROBOTS" content="INDEX, FOLLOW">
     <meta name="author" content="@yield('author')">
     <meta name="keywords" content="@yield('keywords')">
     <meta name="google-site-verification" content="txHaVVh3gwpiIVTX8_-oR2D25IaXuednax3Cc5ZBQOI"/>
-    <link href="http://facebook.com/yourserviceconnection" rel="publisher"/>
+    <link href="https://facebook.com/yourserviceconnection" rel="publisher"/>
     {!! Html::style('css/app.css') !!}
     {!! Html::style('css/style.min.css') !!}
     {!! Html::style('https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css') !!}
@@ -81,7 +81,7 @@
 
         </header>
         @yield('banner');
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- Place this tag in your head or just before your close body tag. -->
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <!-- yourserviceconnection -->
@@ -219,7 +219,7 @@
         crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 {!! Html::script('https://cdnjs.cloudflare.com/ajax/libs/tether/1.1.1/js/tether.min.js') !!}
 {!! Html::script('https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js') !!}
 {!! Html::script('https://cdnjs.cloudflare.com/ajax/libs/jquery-infinitescroll/2.1.0/jquery.infinitescroll.min.js') !!}
