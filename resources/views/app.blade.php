@@ -187,9 +187,9 @@
             <section class="col-md-3">
                 <h4 class="title">BLOG</h4>
                 <ul>
-                    <li><a href="http://blog.yourserviceconnection.com">Home</a></li>
-                    <li><a href="http://blog.yourserviceconnection.com/single/25">Recent Posts</a></li>
-                    <li><a href="http://blog.yourserviceconnection.com/onlyme">Login</a></li>
+                    <li><a href="https://blog.yourserviceconnection.com">Home</a></li>
+                    <li><a href="https://blog.yourserviceconnection.com/single/25">Recent Posts</a></li>
+                    <li><a href="https://blog.yourserviceconnection.com/onlyme">Login</a></li>
                 </ul>
             </section>
             <section class="col-md-3">
