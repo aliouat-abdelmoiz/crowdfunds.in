@@ -20,8 +20,15 @@
                    placeholder="Fullname"/>
             <input type="text" name="username" id="username" value="{{ Input::old('username') }}"
                    placeholder="Username"/>
-            <input type="text" name="email" id="email" value="{{ Input::old('email') }}"
-                   placeholder="Enter Email Address"/>
+            @if(Request::get("email") != null)
+                <label for="email" class="green">Your Email is Valid</label>
+                <input type="text" name="email" id="email" value="{{ Request::get('email') }}"
+                       placeholder="Enter Email Address"/>
+                <input type="hidden" value="true" name="validate">
+            @else
+                <input type="text" name="email" id="email" value="{{ Input::old('email') }}"
+                       placeholder="Enter Email Address"/>
+            @endif
             <input type="text" name="email_confirmation" value="{{ Input::old('email_confirmation') }}"
                    id="email_confirmation" placeholder="Re-type Email Address"/>
             <input type="password" name="password" id="password"

@@ -108,11 +108,15 @@ class AuthController extends Controller
      */
     public function create(array $data)
     {
+        if(\Request::get('validate') == "true") {
+            $validate = "true";
+        }
         $user = User::create([
             'name' => $data['fullname'],
             'username' => $data['username'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'activate' => $validate == "true" ? 1 : 0
         ]);
         $user->userinfo()->create([
             'country' => $data['country'],
