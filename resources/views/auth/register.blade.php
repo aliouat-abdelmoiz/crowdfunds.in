@@ -28,6 +28,7 @@
             @else
                 <input type="text" name="email" id="email" value="{{ Input::old('email') }}"
                        placeholder="Enter Email Address"/>
+                <input type="hidden" value="false" name="validate">
             @endif
             <input type="text" name="email_confirmation" value="{{ Input::old('email_confirmation') }}"
                    id="email_confirmation" placeholder="Re-type Email Address"/>

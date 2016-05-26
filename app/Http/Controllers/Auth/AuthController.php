@@ -110,6 +110,8 @@ class AuthController extends Controller
     {
         if(\Request::get('validate') == "true") {
             $validate = "true";
+        } else {
+            $validate = "false";
         }
         $user = User::create([
             'name' => $data['fullname'],
