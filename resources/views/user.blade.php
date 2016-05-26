@@ -12,10 +12,10 @@
             <h4 class="title">User Profile</h4>
 
             @if(Auth::user()->hasRole('Provider'))
-                <img onerror="imgError()" src="/uploads/users/logos/{{ Auth::user()->provider->logo == "" ? Auth::user()->avatar : Auth::user()->provider->logo }}"
+                <img onerror="imgError(this)" src="/uploads/users/logos/{{ Auth::user()->provider->logo == "" ? Auth::user()->avatar : Auth::user()->provider->logo }}"
                      alt="">
             @else
-                <img onerror="imgError()" src="/uploads/users/logos/{{  Auth::user()->avatar }}"
+                <img onerror="imgError(this)" src="/uploads/users/logos/{{  Auth::user()->avatar }}"
                      alt="">
             @endif
 
