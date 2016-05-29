@@ -6,6 +6,7 @@ use App\Category;
 use App\Provider;
 use App\Subcategory;
 use App\User;
+use Auth;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
