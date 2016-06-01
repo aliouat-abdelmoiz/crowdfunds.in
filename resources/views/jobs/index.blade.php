@@ -26,7 +26,7 @@
         <p><b>Job Visiblity : </b>
         <p>
             {!! Form::checkbox('license', 'License') !!} License
-            {!! Form::checkbox('handycap', 'Handycap') !!} Handycap
+            {!! Form::checkbox('handyman', 'handyman') !!} handyman
             {!! Form::checkbox('insurance', 'Insurance') !!} Insurance
         <hr>
         @if(Auth::guest())
