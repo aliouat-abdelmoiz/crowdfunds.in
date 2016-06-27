@@ -9,7 +9,7 @@
                     <li>
                         <a class="clearfix" href="/jobs/{{ \App\Category::find($subcat->category_id)->name }}/{{ $subcat->name }}/{{ $subcat->category_id }}/{{ $subcat->id }}"><img
                                     class="myimage" data-subcategory="{{ $subcat->id }}" onerror="imgError(this)"
-                                    src="http://admin.yourserviceconnection.com/upload/subcategories/images/thumbs/{{ $subcat->image }}"
+                                    src="https://admin.yourserviceconnection.com/upload/subcategories/images/thumbs/{{ $subcat->image }}"
                                     alt=""></a>
                         <a class="clearfix" href="/jobs/{{ \App\Category::find($subcat->category_id)->name }}/{{ $subcat->name }}/{{ $subcat->category_id }}/{{ $subcat->id }}">
                             <h5>{{ $subcat->name }}</h5></a>
