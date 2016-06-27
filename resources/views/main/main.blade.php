@@ -10,7 +10,7 @@
     <p class="para-home">
         {{ DB::table('personal')->find(1)->text }}
     </p>
-    <a href="http://blog.yourserviceconnection.com" class="btn btn-red center-block">See our blog for more
+    <a href="https://blog.yourserviceconnection.com" class="btn btn-red center-block">See our blog for more
         information</a>
 @endsection
 @section('content')
@@ -30,7 +30,7 @@
                         <li class="col-md-4 pageitem">
                             <a href="/Items/{{$category->name}}/{{ $category->id }}">
                                 <img id="cat{{ $category->id }}" onerror="imgError(this)" class="thumbimg no-margin"
-                                     src="{{ \App\Category::GetPrimaryUserPic($category->id) == "not" ? "http://admin.yourserviceconnection.com/upload/categories/images/thumbs/$category->image" : \App\Category::GetPrimaryUserPic($category->id) }}"
+                                     src="{{ \App\Category::GetPrimaryUserPic($category->id) == "not" ? "https://admin.yourserviceconnection.com/upload/categories/images/thumbs/$category->image" : \App\Category::GetPrimaryUserPic($category->id) }}"
                                      alt="{{ $category->name }}"/>
                             </a>
                             <p class="categories-subcategories-margin">{{ str_limit($category->name, 30) }}</p>
