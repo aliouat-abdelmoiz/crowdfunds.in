@@ -30,6 +30,11 @@ elixir(function(mix) {
 });
 
 require('laravel-elixir-wiredep');
+require('laravel-elixir-imagemin');
+
+elixir(function(mix) {
+   mix.imagemin();
+});
 
 elixir(function(mix) {
    mix.wiredep({src: 'app.blade.php'});
