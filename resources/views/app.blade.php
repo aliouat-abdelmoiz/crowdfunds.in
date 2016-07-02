@@ -232,20 +232,20 @@
             </h1>
         </div>
         <!-- bower:js -->
-        <script src="/bower_components/jquery/dist/jquery.js"></script>
-        <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="/bower_components/vue/dist/vue.js"></script>
-        <script src="/bower_components/jquery.maskedinput/dist/jquery.maskedinput.js"></script>
-        <script src="/bower_components/sweetalert/dist/sweetalert.min.js"></script>
-        <script src="/bower_components/jquery-infinite-scroll/jquery.infinitescroll.js"></script>
-        <script src="/bower_components/vue-resource/dist/vue-resource.js"></script>
-        <script src="/bower_components/dropzone/dist/min/dropzone.min.js"></script>
+        <script src="/bower_components/jquery/dist/jquery.js" defer="defer"></script>
+        <script src="/bower_components/bootstrap/dist/js/bootstrap.js" defer="defer"></script>
+        <script src="/bower_components/vue/dist/vue.js" defer="defer"></script>
+        <script src="/bower_components/jquery.maskedinput/dist/jquery.maskedinput.js" defer="defer"></script>
+        <script src="/bower_components/sweetalert/dist/sweetalert.min.js" defer="defer"></script>
+        <script src="/bower_components/jquery-infinite-scroll/jquery.infinitescroll.js" defer="defer"></script>
+        <script src="/bower_components/vue-resource/dist/vue-resource.js" defer="defer"></script>
+        <script src="/bower_components/dropzone/dist/min/dropzone.min.js" defer="defer"></script>
         <!-- endbower -->
         <?php include public_path('/lib/premium.phtml')?>
         @include('partial.notify')
         @yield('script')
         @if(Auth::check())
-            <script defer>
+            <script defer="defer">
                 var source = new EventSource("/messages");
                 source.onmessage = function(event) {
                     if (event.data != 0) {
@@ -261,6 +261,6 @@
             </script>
         @endif
         </div>
-        {!! Html::script('/lib/app.min.js', ['defer']) !!}
+        {!! Html::script('/lib/app.min.js') !!}
     </body>
 </html>
