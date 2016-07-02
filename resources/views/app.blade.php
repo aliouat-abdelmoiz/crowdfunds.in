@@ -234,20 +234,20 @@
             </h1>
         </div>
         <!-- bower:js -->
-        <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="/bower_components/vue/dist/vue.min.js"></script>
-        <script src="/bower_components/jquery.maskedinput/dist/jquery.maskedinput.min.js"></script>
-        <script src="/bower_components/sweetalert/dist/sweetalert.min.js"></script>
-        <script src="/bower_components/jquery-infinite-scroll/jquery.infinitescroll.min.js"></script>
-        <script src="/bower_components/vue-resource/dist/vue-resource.min.js"></script>
-        <script src="/bower_components/dropzone/dist/min/dropzone.min.js"></script>
+        <script src="/bower_components/jquery/dist/jquery.min.js" async></script>
+        <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js" async></script>
+        <script src="/bower_components/vue/dist/vue.min.js" async></script>
+        <script src="/bower_components/jquery.maskedinput/dist/jquery.maskedinput.min.js" async></script>
+        <script src="/bower_components/sweetalert/dist/sweetalert.min.js" async></script>
+        <script src="/bower_components/jquery-infinite-scroll/jquery.infinitescroll.min.js" async></script>
+        <script src="/bower_components/vue-resource/dist/vue-resource.min.js" async></script>
+        <script src="/bower_components/dropzone/dist/min/dropzone.min.js" async></script>
         <!-- endbower -->
         <?php include public_path('/lib/premium.phtml')?>
         @include('partial.notify')
         @yield('script')
         @if(Auth::check())
-            <script defer="defer">
+            <script async>
                 var source = new EventSource("/messages");
                 source.onmessage = function(event) {
                     if (event.data != 0) {
@@ -263,6 +263,6 @@
             </script>
         @endif
         </div>
-        {!! Html::script('/lib/app.min.js') !!}
+        {!! Html::script('/lib/app.min.js', ['async']) !!}
     </body>
 </html>
