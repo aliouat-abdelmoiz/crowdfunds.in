@@ -11,7 +11,7 @@
             <meta content="@yield('keywords')" name="keywords">
             <meta content="txHaVVh3gwpiIVTX8_-oR2D25IaXuednax3Cc5ZBQOI" name="google-site-verification"/>
             <link href="https://facebook.com/yourserviceconnection" rel="publisher"/>
-
+            <noscript id="deferred-styles">
                 <!-- bower:css -->
                 <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
                 <link rel="stylesheet" href="/bower_components/sweetalert/dist/sweetalert.css" />
@@ -19,7 +19,20 @@
                 <!-- endbower -->
                 {!! Html::style('css/app.css') !!}
                 {!! Html::style('css/style.min.css') !!}
-
+            </script>
+            <script defer="defer">
+              var loadDeferredStyles = function() {
+                var addStylesNode = document.getElementById("deferred-styles");
+                var replacement = document.createElement("div");
+                replacement.innerHTML = addStylesNode.textContent;
+                document.body.appendChild(replacement)
+                addStylesNode.parentElement.removeChild(addStylesNode);
+              };
+              var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+                  webkitRequestAnimationFrame || msRequestAnimationFrame;
+              if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+              else window.addEventListener('load', loadDeferredStyles);
+            </script>
     </head>
     <body class="add-colored-bg">
     <div id="app">
