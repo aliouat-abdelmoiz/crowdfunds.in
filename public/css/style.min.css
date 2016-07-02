@@ -1,9 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
-
 .main-content {
-    -webkit-box-shadow: 0px 0px 15px -2px rgba(176,176,176,0.2);
-    -moz-box-shadow: 0px 0px 15px -2px rgba(176,176,176,0.2);
-    box-shadow: 0px 0px 15px -2px rgba(176,176,176,0.2);
+    -webkit-box-shadow: 0px 0px 15px -2px rgba(176, 176, 176, 0.2);
+    -moz-box-shadow: 0px 0px 15px -2px rgba(176, 176, 176, 0.2);
+    box-shadow: 0px 0px 15px -2px rgba(176, 176, 176, 0.2);
 }
 
 body {
@@ -21,22 +20,30 @@ body {
     background: #FFFFFF;
 }
 
+
 /* Custom container */
+
 .container-fixed {
     margin: 0 auto;
     max-width: 1170px;
 }
+
 .container-fixed > hr {
     margin: 30px 0;
 }
 
 .bodycontainer {
     background: #FFFFFF;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=0, Color=#000000)";/*IE 8*/
-    -moz-box-shadow: 0 0 50px -7px rgba(0,0,0,0.4);/*FF 3.5+*/
-    -webkit-box-shadow: 0 0 50px -7px rgba(0,0,0,0.4);/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
-    box-shadow: 0 0 50px -7px rgba(0,0,0,0.4);/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=135, Color=#000000); /*IE 5.5-7*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=0, Color=#000000)";
+    /*IE 8*/
+    -moz-box-shadow: 0 0 50px -7px rgba(0, 0, 0, 0.4);
+    /*FF 3.5+*/
+    -webkit-box-shadow: 0 0 50px -7px rgba(0, 0, 0, 0.4);
+    /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+    box-shadow: 0 0 50px -7px rgba(0, 0, 0, 0.4);
+    /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+    filter: progid: DXImageTransform.Microsoft.Shadow(Strength=50, Direction=135, Color=#000000);
+    /*IE 5.5-7*/
 }
 
 .nav a {
@@ -99,25 +106,43 @@ body {
     border-radius: 0;
 }
 
+
 /* enable absolute positioning */
+
 .inner-addon {
     position: relative;
 }
 
+
 /* style icon */
+
 .inner-addon .glyphicon {
     position: absolute;
     padding: 10px;
     pointer-events: none;
 }
 
+
 /* align icon */
-.left-addon .glyphicon  { left:  0px;}
-.right-addon .glyphicon { right: 0px;}
+
+.left-addon .glyphicon {
+    left: 0px;
+}
+
+.right-addon .glyphicon {
+    right: 0px;
+}
+
 
 /* add padding  */
-.left-addon input  { padding-left:  30px; }
-.right-addon input { padding-right: 30px; }
+
+.left-addon input {
+    padding-left: 30px;
+}
+
+.right-addon input {
+    padding-right: 30px;
+}
 
 .glyphicon-search {
     top: 4px;
@@ -341,13 +366,21 @@ select {
 }
 
 @-webkit-keyframes spin2 {
-    from { -webkit-transform: rotate(0deg);}
-    to { -webkit-transform: rotate(360deg);}
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
 }
 
 @keyframes spin {
-    from { transform: scale(1) rotate(0deg);}
-    to { transform: scale(1) rotate(360deg);}
+    from {
+        transform: scale(1) rotate(0deg);
+    }
+    to {
+        transform: scale(1) rotate(360deg);
+    }
 }
 
 #datacities {
@@ -400,9 +433,9 @@ select {
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     border-radius: 8px;
-    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
-    -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
-    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
 }
 
 .tt-suggestion {
@@ -441,19 +474,15 @@ select {
     display: none;
 }
 
-.tabs-below > .nav-tabs,
-.tabs-right > .nav-tabs,
-.tabs-left > .nav-tabs {
+.tabs-below > .nav-tabs, .tabs-right > .nav-tabs, .tabs-left > .nav-tabs {
     border-bottom: 0;
 }
 
-.tab-content > .tab-pane,
-.pill-content > .pill-pane {
+.tab-content > .tab-pane, .pill-content > .pill-pane {
     display: none;
 }
 
-.tab-content > .active,
-.pill-content > .active {
+.tab-content > .active, .pill-content > .active {
     display: block;
 }
 
@@ -472,25 +501,20 @@ select {
     border-radius: 0 0 4px 4px;
 }
 
-.tabs-below > .nav-tabs > li > a:hover,
-.tabs-below > .nav-tabs > li > a:focus {
+.tabs-below > .nav-tabs > li > a:hover, .tabs-below > .nav-tabs > li > a:focus {
     border-top-color: #ddd;
     border-bottom-color: transparent;
 }
 
-.tabs-below > .nav-tabs > .active > a,
-.tabs-below > .nav-tabs > .active > a:hover,
-.tabs-below > .nav-tabs > .active > a:focus {
+.tabs-below > .nav-tabs > .active > a, .tabs-below > .nav-tabs > .active > a:hover, .tabs-below > .nav-tabs > .active > a:focus {
     border-color: transparent #ddd #ddd #ddd;
 }
 
-.tabs-left > .nav-tabs > li,
-.tabs-right > .nav-tabs > li {
+.tabs-left > .nav-tabs > li, .tabs-right > .nav-tabs > li {
     float: none;
 }
 
-.tabs-left > .nav-tabs > li > a,
-.tabs-right > .nav-tabs > li > a {
+.tabs-left > .nav-tabs > li > a, .tabs-right > .nav-tabs > li > a {
     min-width: 74px;
     margin-right: 0;
     margin-bottom: 3px;
@@ -509,14 +533,11 @@ select {
     border-radius: 4px 0 0 4px;
 }
 
-.tabs-left > .nav-tabs > li > a:hover,
-.tabs-left > .nav-tabs > li > a:focus {
+.tabs-left > .nav-tabs > li > a:hover, .tabs-left > .nav-tabs > li > a:focus {
     border-color: #eeeeee #dddddd #eeeeee #eeeeee;
 }
 
-.tabs-left > .nav-tabs .active > a,
-.tabs-left > .nav-tabs .active > a:hover,
-.tabs-left > .nav-tabs .active > a:focus {
+.tabs-left > .nav-tabs .active > a, .tabs-left > .nav-tabs .active > a:hover, .tabs-left > .nav-tabs .active > a:focus {
     border-color: #ddd transparent #ddd #ddd;
     *border-right-color: #ffffff;
 }
@@ -534,41 +555,67 @@ select {
     border-radius: 0 4px 4px 0;
 }
 
-.tabs-right > .nav-tabs > li > a:hover,
-.tabs-right > .nav-tabs > li > a:focus {
+.tabs-right > .nav-tabs > li > a:hover, .tabs-right > .nav-tabs > li > a:focus {
     border-color: #eeeeee #eeeeee #eeeeee #dddddd;
 }
 
-.tabs-right > .nav-tabs .active > a,
-.tabs-right > .nav-tabs .active > a:hover,
-.tabs-right > .nav-tabs .active > a:focus {
+.tabs-right > .nav-tabs .active > a, .tabs-right > .nav-tabs .active > a:hover, .tabs-right > .nav-tabs .active > a:focus {
     border-color: #ddd #ddd #ddd transparent;
     *border-left-color: #ffffff;
 }
-.com { color: #93a1a1; }
-.lit { color: #195f91; }
-.pun, .opn, .clo { color: #93a1a1; }
-.fun { color: #dc322f; }
-.str, .atv { color: #D14; }
-.kwd, .prettyprint .tag { color: #1e347b; }
-.typ, .atn, .dec, .var { color: teal; }
-.pln { color: #48484c; }
+
+.com {
+    color: #93a1a1;
+}
+
+.lit {
+    color: #195f91;
+}
+
+.pun, .opn, .clo {
+    color: #93a1a1;
+}
+
+.fun {
+    color: #dc322f;
+}
+
+.str, .atv {
+    color: #D14;
+}
+
+.kwd, .prettyprint .tag {
+    color: #1e347b;
+}
+
+.typ, .atn, .dec, .var {
+    color: teal;
+}
+
+.pln {
+    color: #48484c;
+}
 
 .prettyprint {
     padding: 8px;
     background-color: #f7f7f9;
     border: 1px solid #e1e1e8;
 }
+
 .prettyprint.linenums {
     -webkit-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
     -moz-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
     box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
 }
 
+
 /* Specify class=linenums on a pre to get line numbering */
+
 ol.linenums {
-    margin: 0 0 0 33px; /* IE indents via margin-left */
+    margin: 0 0 0 33px;
+    /* IE indents via margin-left */
 }
+
 ol.linenums li {
     padding-left: 12px;
     color: #bebec5;
@@ -576,9 +623,10 @@ ol.linenums li {
     text-shadow: 0 1px 0 #fff;
 }
 
-.nav-tabs{
-    background-color:#161616;
+.nav-tabs {
+    background-color: #161616;
 }
+
 .tabs-left > .nav-tabs .active > a, .tabs-left > .nav-tabs .active > a:hover, .tabs-left > .nav-tabs .active > a:focus {
     background: #195f91;
     border-radius: 0;
@@ -592,19 +640,22 @@ ol.linenums li {
     border: none;
     color: #fff0ff;
 }
-.tab-content{
+
+.tab-content {
     background-color: #ebeff2;
     color: #2d2d2d;
-    padding:5px
+    padding: 5px
 }
-.nav-tabs > li > a{
+
+.nav-tabs > li > a {
     border: medium none;
 }
-.nav-tabs > li > a:hover{
+
+.nav-tabs > li > a:hover {
     background-color: #303136 !important;
     border: medium none;
     border-radius: 0;
-    color:#fff;
+    color: #fff;
 }
 
 .add-colored-bg {
@@ -673,9 +724,7 @@ ol.linenums li {
     padding: 0;
 }
 
-.heading {
-
-}
+.heading {}
 
 .add-border-bottom {
     border-bottom: solid 1px #f3f3f3;
@@ -880,6 +929,7 @@ div.endedRate {
     font-size: 11px;
 }
 
+
 /* User Profile */
 
 .profile {
@@ -896,9 +946,7 @@ div.endedRate {
     width: 120px;
 }
 
-.profile .user_name {
-
-}
+.profile .user_name {}
 
 .btn-facebook {
     background: #3b5998;
@@ -1020,7 +1068,6 @@ div.endedRate {
 
 .profile-page h3 {
     margin: 10px 0 0 20px;
-
 }
 
 .profile-page a.website {
@@ -1033,6 +1080,7 @@ div.endedRate {
     margin: 20px 0 10px 10px;
     color: #787878;
 }
+
 .cat-subcat {
     margin: 0 0 20px 10px;
     padding: 0;
@@ -1307,7 +1355,7 @@ ul.search li img {
 
 .list_item_container {
     color: #000000;
-    width:100%;
+    width: 100%;
     padding: 0px 0;
 }
 
@@ -1349,9 +1397,20 @@ ul.danger {
 }
 
 ul.danger li {
-    padding:10px;
+    padding: 10px;
     margin: 0 0 0 0;
     border-bottom: solid 1px;
+}
+
+.load {
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 0;
+    padding: 3px 20px;
+    z-index: 5;
+    background: #a62222;
+    color: white;
 }
 
 ul.autocomplete-list {
@@ -1423,6 +1482,35 @@ ul.autocomplete-list li em {
 .done-box a {
     margin: 20px auto;
     color: #c792ea;
+}
+
+.ig-b- {
+    display: inline-block;
+}
+
+.ig-b- img {
+    visibility: hidden;
+}
+
+.ig-b-:hover {
+    background-position: 0 -60px;
+}
+
+.ig-b-:active {
+    background-position: 0 -120px;
+}
+
+.ig-b-v-24 {
+    width: 137px;
+    height: 24px;
+    background: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24.png) no-repeat 0 0;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .ig-b-v-24 {
+        background-image: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24@2x.png);
+        background-size: 160px 178px;
+    }
 }
 
 @media (max-width: 767px) {

@@ -28,3 +28,9 @@ elixir(function(mix) {
         ], 'public/lib/app.min.js'
     )
 });
+
+require('laravel-elixir-wiredep');
+
+elixir(function(mix) {
+   mix.wiredep({src: 'app.blade.php'});
+});

@@ -1,286 +1,284 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>@yield('title')</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Your service connection - @yield('description')">
-    <link rel="canonical" href="https://crowdfunds.in/page/@yield('canonical')"/>
-    <meta name="ROBOTS" content="INDEX, FOLLOW">
-    <meta name="author" content="@yield('author')">
-    <meta name="keywords" content="@yield('keywords')">
-    <meta name="google-site-verification" content="txHaVVh3gwpiIVTX8_-oR2D25IaXuednax3Cc5ZBQOI"/>
-    <link href="https://facebook.com/yourserviceconnection" rel="publisher"/>
-    {!! Html::style('css/app.css') !!}
-    {!! Html::style('css/style.min.css') !!}
-    {!! Html::style('https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css') !!}
-    {!! Html::style('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css') !!}
-    {!! Html::style('/css/dropzone.css') !!}
-    <script>function imgError(image) {
-            image.onerror = "";
-            image.src = "../images/no.gif";
-            return true;
-        }</script>
-</head>
-<body class="add-colored-bg">
-<div class="load"
-     style="position:absolute; display: none; left: 0; top: 0; padding: 3px 20px; z-index: 5; background: #a62222; color: white;">
-    Loading...
-</div>
-<div id="example"></div>
-<figure class="jumbotron container">
-    <section class="container">
-        <header class="navbar bs-docs-nav" role="banner">
-            <div class="container">
-                <div class="navbar-header">
-                    <button class="navbar-toggle" type="button" data-toggle="collapse"
-                            data-target=".bs-navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a href="/" class="navbar-brand"><img
-                                src="{{ asset('/images/logo.png') }}" alt=""/></a>
-                </div>
-                <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown ">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+    <head>
+            <meta charset="utf-8">
+            <title>@yield('title')</title>
+            <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+            <meta content="Your service connection - @yield('description')" name="description">
+            <link href="https://www.yourserviceconnection.com/page/@yield('canonical')" rel="canonical"/>
+            <meta content="INDEX, FOLLOW" name="ROBOTS">
+            <meta content="@yield('author')" name="author">
+            <meta content="@yield('keywords')" name="keywords">
+            <meta content="txHaVVh3gwpiIVTX8_-oR2D25IaXuednax3Cc5ZBQOI" name="google-site-verification"/>
+            <link href="https://facebook.com/yourserviceconnection" rel="publisher"/>
+            <!-- bower:css -->
+            <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
+            <link rel="stylesheet" href="/bower_components/sweetalert/dist/sweetalert.css" />
+            <link rel="stylesheet" href="/bower_components/dropzone/dist/min/dropzone.min.css" />
+            <!-- endbower -->
+            {!! Html::style('css/app.css') !!}
+            {!! Html::style('css/style.min.css') !!}
+    </head>
+    <body class="add-colored-bg">
+    <div id="app">
+        <div class="load">Loading...</div>
+        <div id="example"></div>
+        <figure class="jumbotron container">
+            <section class="container">
+                <header class="navbar bs-docs-nav" role="banner">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button class="navbar-toggle" data-target=".bs-navbar-collapse" data-toggle="collapse" type="button">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="/">
+                                <img alt="Your Service Connection" src="{{ asset('images/logo.png') }}"/>
+                            </a>
+                        </div>
+                        <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                            <ul class="nav navbar-nav">
+                                <li class="dropdown ">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        @if(Auth::check())
+                                            {{ Auth::user()->name == "" ? Auth::user()->username : Auth::user()->name }}
+                                        @else
+                                            Account
+                                        @endif
+                                        <b class="caret"></b>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        @if(Auth::guest())
+                                            <li><a href="/auth/login">Login</a></li>
+                                            <li><a href="/auth/register">Register</a>
+                                        </li>
+                                        @else
+                                            <li><a href="/user">Profile</a></li>
+                                            @if(Auth::user()->hasRole('Provider'))
+                                            <li><a href="/plan/show">Premium</a></li>
+                                            <li><a href="/advertise/admin">My Active Plans</a></li>
+                                            @endif
+                                        <li><a href="/auth/logout">Logout</a></li>
+                                        <li><a href="/account/delete">Delete Account</a></li>
+                                        @endif
+                                    </ul>
+                                </li>
                                 @if(Auth::check())
-                                    {{ Auth::user()->name == "" ? Auth::user()->username : Auth::user()->name }}
-                                @else
-                                    Account
+                                    <li><a class="messages" href="/message">Inbox<span class="badge"></span></a></li>
                                 @endif
-                                <b class="caret"></b></a>
-
-                            <ul class="dropdown-menu">
-                                @if(Auth::guest())
-                                    <li><a href="/auth/login">Login</a></li>
-                                    <li><a href="/auth/register">Register</a></li>
-                                @else
-                                    <li><a href="/user">Profile</a></li>
-                                    @if(Auth::user()->hasRole('Provider'))
-                                        <li><a href="/plan/show">Premium</a></li>
-                                        <li><a href="/advertise/admin">My Active Plans</a></li>
-                                    @endif
-                                    <li><a href="/auth/logout">Logout</a></li>
-                                    <li><a href="/account/delete">Delete Account</a></li>
-                                @endif
+                                {{ \App\Http\Controllers\Api::GetPages() }}
                             </ul>
-                        </li>
-                        @if(Auth::check())
-                            <li>
-                                <a href="/message" class="messages">Inbox <span class="badge"></span></a>
-                            </li>
+                        </nav>
+                    </div>
+                </header>
+                @yield('banner');
+                <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- yourserviceconnection -->
+                <ins class="adsbygoogle" data-ad-client="ca-pub-8637984357942481" data-ad-format="auto" data-ad-slot="6327224655" style="display:block"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </section>
+        </figure>
+        <div class="container bodycontainer" id="bodycontainer">
+            <div class="row add-margin">
+                <div class="col-md-3">
+                    <div class="g-plusone" data-annotation="inline" data-size="tall" data-width="300"></div>
+                </div>
+                <div class="col-md-3">
+                    <div class="fb-like" data-action="like" data-href="https://facebook.com/yourserviceconnection.com" data-layout="button_count" data-share="false" data-show-faces="false"></div>
+                    </div>
+                    <div class="col-md-3"><a class="twitter-follow-button" data-show-count="true" href="https://twitter.com/ursvcconnection">
+                            Follow @ursvcconnection
+                        </a>
+                    </div>
+                    <div class="col-md-2">
+                        <a class="ig-b- ig-b-v-24" href="https://www.instagram.com/yourserviceconnection/?ref=badge">
+                            <img alt="Instagram" src="//badges.instagram.com/static/images/ig-badge-view-24.png"/>
+                        </a>
+                    </div>
+                    <ins class="adsbygoogle" data-ad-client="ca-pub-8637984357942481" data-ad-format="auto" data-ad-slot="6327224655" style="display:block">
+                    </ins>
+                </div>
+                <div id="search-app">
+                    <div class="inner-addon left-addon">
+                        <input autocomplete="off" class="form-control search-bar" data-provide="typeahead" id="search" name="query" placeholder="" type="text" value="{{ Input::old('query') }}"/>
+                    </div>
+                </div>
+                <section class="row panel">
+                    <article class="col-sm-4 no-margin no-padding">
+                        @if(Auth::guest())
+                            <i class="fa fa-lock red"><span class="text">Not logged in</span></i>
+                        @else
+                        <i class="fa fa-unlock-alt">
+                            <span class="text">You are logged as
+                                <b>
+                                    <a href="/profile">
+                                        {{ Auth::user()->name == "" ? Auth::user()->username : Auth::user()->name }}
+                                    </a>
+                                </b>
+                            </span>
+                        </i>
                         @endif
-                        {{ \App\Http\Controllers\Api::GetPages() }}
-                    </ul>
-                </nav>
+                    </article>
+                    @if(Auth::guest())
+                    <article class="col-md-8 hidden-sm hidden-xs text-right no-padding">
+                        <i class="fa fa-external-link-square no-margin">
+                            <span class="text">
+                                <a href="/auth/login">
+                                    Login
+                                </a>
+                            </span>
+                        </i>
+                    </article>
+                    @else
+                    <article class="col-md-8 hidden-sm hidden-xs text-right no-padding">
+                        <i class="fa fa-external-link-square">
+                            <span class="text">
+                                <a href="/auth/logout">
+                                    Logout
+                                </a>
+                            </span>
+                        </i>
+                        <i class="fa fa-key">
+                            <span class="text">
+                                <a href="/password/change">
+                                    Change Password
+                                </a>
+                            </span>
+                        </i>
+                        <i class="fa fa-envelope">
+                            <a class="low-opacity" href="/message">
+                                <span class="text" id="newmessages">
+                                    Messages
+                                </span>
+                            </a>
+                        </i>
+                        <i class="fa fa-bell no-margin low-opacity">
+                            <span class="text notification">
+                                Notifcations
+                            </span>
+                        </i>
+                    </article>
+                    @endif
+                </section>
+                @yield('content')
+            </br>
+        </div>
+        <footer class="panel-footer footer container">
+            <div class="container footer-links">
+                <figure class="row">
+                    <section class="col-md-3">
+                        <h4 class="title">
+                            SITE LINKS
+                        </h4>
+                        <ul>
+                            <li>
+                                <a href="/">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.yourserviceconnection.com/about-us">
+                                    About us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.yourserviceconnection.com/contact-us">
+                                    Contact us
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="col-md-3">
+                        <h4 class="title">
+                            DASHBOARD
+                        </h4>
+                        <ul>
+                            <li>
+                                <a href="https://www.yourserviceconnection.com/auth/login">
+                                    Login
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.yourserviceconnection.com/auth/register">
+                                    Register
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="col-md-3">
+                        <h4 class="title">
+                            BLOG
+                        </h4>
+                        <ul>
+                            <li>
+                                <a href="https://blog.yourserviceconnection.com">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://blog.yourserviceconnection.com/single/25">
+                                    Recent Posts
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://blog.yourserviceconnection.com/onlyme">
+                                    Login
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="col-md-3">
+                        <h4 class="footer-logo text-right">
+                            <img alt="Your Service Connection" src="{{ asset('/images/logo.png') }}" width="200"/>
+                        </h4>
+                    </section>
+                </figure>
+                <figure class="row">
+                    <section class="col-md-5">
+                        <h6 class="copyright">
+                            © 2015 All Right Reserved - Your Service Connection
+                        </h6>
+                    </section>
+                </figure>
             </div>
-
-        </header>
-        @yield('banner');
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- Place this tag in your head or just before your close body tag. -->
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
-        <!-- yourserviceconnection -->
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-8637984357942481"
-             data-ad-slot="6327224655"
-             data-ad-format="auto"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-
-    </section>
-</figure>
-<div class="container bodycontainer" id="bodycontainer">
-    <br>
-    <div class="row">
-        <div class="col-md-3">
-            <div class="g-plusone" data-size="tall" data-annotation="inline" data-width="300"></div>
+        </footer>
+        <div class="loading">
+            <h1>
+                Loading Please Wait...
+            </h1>
         </div>
-        <div class="col-md-3">
-            <div class="fb-like" data-href="https://facebook.com/yourserviceconnection.com" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-        </div>
-        <div class="col-md-3">
-            <a href="https://twitter.com/ursvcconnection" class="twitter-follow-button" data-show-count="true">Follow @ursvcconnection</a>
-        </div>
-        <div class="col-md-2">
-            <style>.ig-b- { display: inline-block; }
-                .ig-b- img { visibility: hidden; }
-                .ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
-                .ig-b-v-24 { width: 137px; height: 24px; background: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24.png) no-repeat 0 0; }
-                @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-                    .ig-b-v-24 { background-image: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24@2x.png); background-size: 160px 178px; } }</style>
-            <a href="https://www.instagram.com/yourserviceconnection/?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
-        </div>
-
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-8637984357942481"
-             data-ad-slot="6327224655"
-             data-ad-format="auto"></ins>
-
-
-    </div>
-    <div id="search-app">
-        <div class="inner-addon left-addon">
-            <input type="text" data-provide="typeahead" name="query" value="{{ Input::old('query') }}" id="search"
-                   class="form-control search-bar" autocomplete="off" placeholder=""/>
-        </div>
-    </div>
-    <section class="row panel">
-
-        <article class="col-sm-4 no-margin no-padding">
-            @if(Auth::guest())
-                <i class="fa fa-lock red"><span class="text">Not logged in</span></i>
-            @else
-                <i class="fa fa-unlock-alt">
-                    <span class="text">You are logged as <b>
-                            <a href="/profile">{{ Auth::user()->name == "" ? Auth::user()->username : Auth::user()->name }}</a></b>
-                        </span>
-                </i>
-            @endif
-        </article>
-        @if(Auth::guest())
-            <article class="col-md-8 hidden-sm hidden-xs text-right no-padding">
-                <i class="fa fa-external-link-square no-margin"><span class="text"><a
-                                href="/auth/login">Login</a></span></i>
-            </article>
-        @else
-            <article class="col-md-8 hidden-sm hidden-xs text-right no-padding">
-                <i class="fa fa-external-link-square"><span class="text"><a
-                                href="/auth/logout">Logout</a></span></i>
-                <i class="fa fa-key"><span class="text"><a
-                                href="/password/change">Change Password</a></span></i>
-
-                <i class="fa fa-envelope"><a class="low-opacity" href="/message"><span class="text"
-                                                                                       id="newmessages">Messages</span></a></i>
-                <i class="fa fa-bell no-margin low-opacity"><span class="text notification">Notifcations</span></i>
-            </article>
+        <!-- bower:js -->
+        <script src="/bower_components/jquery/dist/jquery.js"></script>
+        <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="/bower_components/vue/dist/vue.js"></script>
+        <script src="/bower_components/jquery.maskedinput/dist/jquery.maskedinput.js"></script>
+        <script src="/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="/bower_components/jquery-infinite-scroll/jquery.infinitescroll.js"></script>
+        <script src="/bower_components/vue-resource/dist/vue-resource.js"></script>
+        <script src="/bower_components/dropzone/dist/min/dropzone.min.js"></script>
+        <!-- endbower -->
+        <?php include public_path('/lib/premium.phtml')?>
+        @include('partial.notify')
+        @yield('script')
+        @if(Auth::check())
+            <script>
+                var source = new EventSource("/messages");
+                source.onmessage = function(event) {
+                    if (event.data != 0) {
+                        $("#newmessages").html(" " + event.data + " New Message's").parent().removeClass('low-opacity').addClass('red');
+                    }
+                };
+                var notification = new EventSource("/notification");
+                notification.onmessage = function(event) {
+                    if(event.data != 0) {
+                        $(".notification").html(" " + event.data + " New Notification's").parent().removeClass('low-opacity').addClass('red');
+                    }
+                };
+            </script>
         @endif
-    </section>
-
-    @yield('content')
-</div>
-<footer class="panel-footer footer container">
-    <div class="container footer-links">
-        <figure class="row">
-            <section class="col-md-3">
-                <h4 class="title">SITE LINKS</h4>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="https://www.yourserviceconnection.com/user/about-us">About us</a></li>
-                    <li><a href="https://www.yourserviceconnection.com/user/contact-us">Contact us</a></li>
-                </ul>
-            </section>
-            <section class="col-md-3">
-                <h4 class="title">DASHBOARD</h4>
-                <ul>
-                    <li><a href="https://www.yourserviceconnection.com/user/login">Login</a></li>
-                    <li><a href="https://www.yourserviceconnection.com/user/registration">Register</a></li>
-                </ul>
-            </section>
-            <section class="col-md-3">
-                <h4 class="title">BLOG</h4>
-                <ul>
-                    <li><a href="https://blog.yourserviceconnection.com">Home</a></li>
-                    <li><a href="https://blog.yourserviceconnection.com/single/25">Recent Posts</a></li>
-                    <li><a href="https://blog.yourserviceconnection.com/onlyme">Login</a></li>
-                </ul>
-            </section>
-            <section class="col-md-3">
-                <h4 class="footer-logo text-right"><img src="{{ asset('/images/logo.png') }}" width="200" alt=""/>
-                </h4>
-            </section>
-        </figure>
-        <figure class="row">
-            <section class="col-md-5">
-                <h6 class="copyright">&copy; 2015 All Right Reserved - Your Service Connection</h6>
-            </section>
-        </figure>
-    </div>
-</footer>
-
-<div class="loading">
-    <h1>Loading Please Wait...</h1>
-</div>
-
-{{-- Local --}}
-{{--<script src="lib/jquery.js"></script>--}}
-{{--<script src="lib/bootstrap.min.js"></script>--}}
-{{--<script src="lib/jquery.infinitescroll.js"></script>--}}
-{{--<script src="lib/vue.js"></script>--}}
-
-<script src="https://code.jquery.com/jquery-2.2.1.js" integrity="sha256-eNcUzO3jsv0XlJLveFEkbB8bA7/CroNpNVk3XpmnwHc="
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
-<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-{!! Html::script('https://cdnjs.cloudflare.com/ajax/libs/tether/1.1.1/js/tether.min.js') !!}
-{!! Html::script('https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js') !!}
-{!! Html::script('https://cdnjs.cloudflare.com/ajax/libs/jquery-infinitescroll/2.1.0/jquery.infinitescroll.min.js') !!}
-{!! Html::script('https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.14/vue.min.js') !!}
-{!! Html::script('https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.6.1/vue-resource.min.js') !!}
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.13.4/jquery.mask.min.js"></script>
-{!! Html::script('/lib/app.min.js') !!}
-<script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
-<?php include(public_path('/lib/premium.phtml')) ?>
-@include('partial.notify')
-@yield('script')
-
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=516593308512917";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-@if(Auth::check())
-    <script>
-
-
-        var source = new EventSource("/messages");
-        source.onmessage = function (event) {
-            if (event.data != 0) {
-                $("#newmessages").html(" " + event.data + " New Message's").parent().removeClass('low-opacity').addClass('red');
-            }
-        };
-        var notification = new EventSource("/notification");
-        notification.onmessage = function (event) {
-            if (event.data != 0) {
-                $(".notification").html(" " + event.data + " New Notification's").parent().removeClass('low-opacity').addClass('red');
-            }
-        };
-
-    </script>
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                        (i[r].q = i[r].q || []).push(arguments)
-                    }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-53421234-1', 'auto');
-        ga('send', 'pageview');
-
-    </script>
-@endif
-</body>
+        </div>
+        {!! Html::script('/lib/app.min.js') !!}
+    </body>
 </html>

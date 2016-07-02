@@ -27,6 +27,36 @@ Route::get('/messages', 'Api@eventStream');
 Route::get('/notification', 'Api@notificationStream');
 Route::get('/images-load', 'Api@getPaidUsersLogo');
 Route::get('/decodejson', 'Api@decode_json');
+Route::get('/contact', function () {
+	return view('main.contact');
+});
+Route::post('/contact', function () {
+	$backup = Mail::getSwiftMailer();
+	$transport = Swift_SmtpTransport::newInstance('smtp.yandex.com', 465, 'ssl');
+	$transport->setUsername('support@yourserviceconnection.com');
+	$transport->setPassword('p@$$w0rd');
+// Any other mailer configuration stuff needed...
+
+	$yandax = new Swift_Mailer($transport);
+
+// Set the mailer as gmail
+	Mail::setSwiftMailer($yandax);
+
+	$mail_name = Request::get("fullname");
+	$email_name = Request::get("email") == "" ? "no-email@blank.com" : Request::get("email");
+	$subject_name = Request::get("subject");
+	$message_name = Request::get("message");
+
+	Mail::send('emails.support', ["name" => $mail_name, "subject_name" => $subject_name, "message_name" => $message_name], function ($message) use ($email_name, $subject_name) {
+		$message->to('support@yourserviceconnection.com');
+		$message->subject($subject_name);
+		$message->from('support@yourserviceconnection.com');
+		$message->replyTo($email_name);
+	});
+
+	Mail::setSwiftMailer($backup);
+
+});
 Route::get('/jobpost', function () {
 	return view('main.job-done');
 });
@@ -66,6 +96,9 @@ Route::get('/afterlogin', 'Main@AfterLogin');
 Route::get('/google/auth', 'Main@loginWithGoogle');
 Route::get('/afterLoginGmail', 'Main@AfterLoginGoogle');
 Route::get('/zip/', 'Api@getLocationByZip');
+Route::get('/image', function () {
+	return "Image";
+});
 Route::get('/change', function () {
 	return view('auth.reset');
 });

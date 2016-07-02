@@ -75,9 +75,6 @@
         {!! Form::close() !!}
     </section>
 
-    {!! Html::script('https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.2.0/min/dropzone.min.js') !!}
-    {!! Html::style('https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.2.0/dropzone.css') !!}
-    {!! Html::style('https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.2.0/basic.css') !!}
 @section('script')
 
     <script>

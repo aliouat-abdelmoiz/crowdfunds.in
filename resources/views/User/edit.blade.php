@@ -32,4 +32,15 @@
         {!! Form::reset('Clear', ['class' => 'btn btn-red-job btn-sm']) !!}
         {!! Form::close() !!}
     </div>
-@endsection
+@stop
+
+@section('scripts')
+    <script>
+        new Vue({
+            el: "#app",
+            ready: function() {
+                alert("asd");
+            }
+        });
+    </script>
+@stop

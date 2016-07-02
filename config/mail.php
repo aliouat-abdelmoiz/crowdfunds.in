@@ -54,7 +54,7 @@ return [
 	|
 	*/
 
-	'from' => ['address' => 'noreply@yourserviceconnection.com', 'name' => 'Your Service Connection'],
+	'from' => ['address' => 'no-reply@yourserviceconnection.com', 'name' => 'Your Service Connection'],
 
 	/*
 	|--------------------------------------------------------------------------
