@@ -31,6 +31,7 @@ elixir(function(mix) {
 
 require('laravel-elixir-wiredep');
 require('laravel-elixir-imagemin');
+require('laravel-elixir-bower');
 
 elixir(function(mix) {
    mix.imagemin();

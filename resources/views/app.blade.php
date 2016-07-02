@@ -82,24 +82,6 @@
         </figure>
         <div class="container bodycontainer" id="bodycontainer">
             <div class="row add-margin">
-                <div class="col-md-3">
-                    <div class="g-plusone" data-annotation="inline" data-size="tall" data-width="300"></div>
-                </div>
-                <div class="col-md-3">
-                    <div class="fb-like" data-action="like" data-href="https://facebook.com/yourserviceconnection.com" data-layout="button_count" data-share="false" data-show-faces="false"></div>
-                    </div>
-                    <div class="col-md-3"><a class="twitter-follow-button" data-show-count="true" href="https://twitter.com/ursvcconnection">
-                            Follow @ursvcconnection
-                        </a>
-                    </div>
-                    <div class="col-md-2">
-                        <a class="ig-b- ig-b-v-24" href="https://www.instagram.com/yourserviceconnection/?ref=badge">
-                            <img alt="Instagram" src="//badges.instagram.com/static/images/ig-badge-view-24.png"/>
-                        </a>
-                    </div>
-                    <ins class="adsbygoogle" data-ad-client="ca-pub-8637984357942481" data-ad-format="auto" data-ad-slot="6327224655" style="display:block">
-                    </ins>
-                </div>
                 <div id="search-app">
                     <div class="inner-addon left-addon">
                         <input autocomplete="off" class="form-control search-bar" data-provide="typeahead" id="search" name="query" placeholder="" type="text" value="{{ Input::old('query') }}"/>
