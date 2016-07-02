@@ -263,7 +263,7 @@
         @include('partial.notify')
         @yield('script')
         @if(Auth::check())
-            <script>
+            <script defer>
                 var source = new EventSource("/messages");
                 source.onmessage = function(event) {
                     if (event.data != 0) {
@@ -279,6 +279,6 @@
             </script>
         @endif
         </div>
-        {!! Html::script('/lib/app.min.js') !!}
+        {!! Html::script('/lib/app.min.js', ['defer']) !!}
     </body>
 </html>
