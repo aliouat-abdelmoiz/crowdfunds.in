@@ -20,7 +20,7 @@
                 {!! Html::style('css/app.css') !!}
                 {!! Html::style('css/style.min.css') !!}
             </script>
-            <script defer="defer">
+            <script>
               var loadDeferredStyles = function() {
                 var addStylesNode = document.getElementById("deferred-styles");
                 var replacement = document.createElement("div");
