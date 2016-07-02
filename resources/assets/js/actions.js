@@ -165,39 +165,6 @@ $("document").ready(function() {
 })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 ga('create', 'UA-53421234-1', 'auto');
 ga('send', 'pageview');
-var source = new EventSource("/messages");
-source.onmessage = function(event) {
-    if (event.data != 0) {
-        $("#newmessages").html(" " + event.data + " New Message's").parent().removeClass('low-opacity').addClass('red');
-    }
-};
-// Notifications
-var notification = new EventSource("/notification");
-notification.onmessage = function(event) {
-    if (event.data != 0) {
-        $(".notification").html(" " + event.data + " New Notification's").parent().removeClass('low-opacity').addClass('red');
-    }
-};
-//Facebook
-(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=516593308512917";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-// Twitter
-! function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0],
-        p = /^http:/.test(d.location) ? 'http' : 'https';
-    if (!d.getElementById(id)) {
-        js = d.createElement(s);
-        js.id = id;
-        js.src = p + '://platform.twitter.com/widgets.js';
-        fjs.parentNode.insertBefore(js, fjs);
-    }
-}(document, 'script', 'twitter-wjs');
 
 function imgError(image) {
     image.onerror = "";
