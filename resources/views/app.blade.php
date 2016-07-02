@@ -74,10 +74,10 @@
                     </div>
                 </header>
                 @yield('banner');
-                <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <script async="" defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <!-- yourserviceconnection -->
                 <ins class="adsbygoogle" data-ad-client="ca-pub-8637984357942481" data-ad-format="auto" data-ad-slot="6327224655" style="display:block"></ins>
-                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                <script defer>(adsbygoogle = window.adsbygoogle || []).push({});</script>
             </section>
         </figure>
         <div class="container bodycontainer" id="bodycontainer">
