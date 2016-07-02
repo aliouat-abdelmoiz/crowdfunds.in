@@ -3,6 +3,9 @@
     <head>
             <meta charset="utf-8">
             <title>@yield('title')</title>
+            <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+            <meta http-equiv="Pragma" content="no-cache" />
+            <meta http-equiv="Expires" content="30" />
             <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
             <meta content="Your service connection - @yield('description')" name="description">
             <link href="https://www.yourserviceconnection.com/page/@yield('canonical')" rel="canonical"/>
@@ -231,13 +234,13 @@
             </h1>
         </div>
         <!-- bower:js -->
-        <script src="/bower_components/jquery/dist/jquery.js"></script>
-        <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="/bower_components/vue/dist/vue.js"></script>
-        <script src="/bower_components/jquery.maskedinput/dist/jquery.maskedinput.js"></script>
+        <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/bower_components/vue/dist/vue.min.js"></script>
+        <script src="/bower_components/jquery.maskedinput/dist/jquery.maskedinput.min.js"></script>
         <script src="/bower_components/sweetalert/dist/sweetalert.min.js"></script>
-        <script src="/bower_components/jquery-infinite-scroll/jquery.infinitescroll.js"></script>
-        <script src="/bower_components/vue-resource/dist/vue-resource.js"></script>
+        <script src="/bower_components/jquery-infinite-scroll/jquery.infinitescroll.min.js"></script>
+        <script src="/bower_components/vue-resource/dist/vue-resource.min.js"></script>
         <script src="/bower_components/dropzone/dist/min/dropzone.min.js"></script>
         <!-- endbower -->
         <?php include public_path('/lib/premium.phtml')?>
