@@ -594,7 +594,7 @@ class Api extends Controller {
 		// add items
 		$subcategories = DB::table('subcategories')->orderBy('created_at', 'desc')->get();
 		foreach ($subcategories as $item) {
-			$sitemap_subcategories->add(htmlentities("http://yourserviceconnection.com/jobs/" . \App\Category::find($item->category_id)->name . "/" . $item->name . "/" . $item->category_id . "/" . $item->id,
+			$sitemap_subcategories->add(htmlentities("https://yourserviceconnection.com/jobs/" . \App\Category::find($item->category_id)->name . "/" . $item->name . "/" . $item->category_id . "/" . $item->id,
 				HTML_ENTITIES, 'UTF-8'), \Carbon\Carbon::now(), 1, 'weekly');
 		}
 
@@ -610,7 +610,7 @@ class Api extends Controller {
 		// add items
 		$posts = DB::table('userinformation')->orderBy('created_at', 'desc')->groupBy('country')->get();
 		foreach ($posts as $post) {
-			$sitemap_country->add("http://yourserviceconnection.com/page/jobs/" . $post->country, \Carbon\Carbon::now(),
+			$sitemap_country->add("https://yourserviceconnection.com/page/jobs/" . $post->country, \Carbon\Carbon::now(),
 				1, 'weekly');
 		}
 
@@ -624,7 +624,7 @@ class Api extends Controller {
 		$tags = DB::table('userinformation')->groupBy('state')->get();
 
 		foreach ($tags as $tag) {
-			$sitemap_state->add("http://yourserviceconnection.com/page/jobs/" . $tag->country . "/" . $tag->state,
+			$sitemap_state->add("https://yourserviceconnection.com/page/jobs/" . $tag->country . "/" . $tag->state,
 				\Carbon\Carbon::now(), '0.5', 'weekly');
 		}
 
@@ -638,7 +638,7 @@ class Api extends Controller {
 		$city = DB::table('userinformation')->groupBy('city')->get();
 
 		foreach ($city as $value) {
-			$sitemap_city->add("http://yourserviceconnection.com/page/jobs/" . $value->country . "/" . $value->state . "/" . $value->city,
+			$sitemap_city->add("https://yourserviceconnection.com/page/jobs/" . $value->country . "/" . $value->state . "/" . $value->city,
 				\Carbon\Carbon::now(), '0.5', 'weekly');
 		}
 
