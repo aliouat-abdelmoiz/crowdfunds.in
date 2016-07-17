@@ -93,16 +93,16 @@
             </div>
         </header>
         @yield('banner');
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8637984357942481"
+             data-ad-slot="6327224655"
+             data-ad-format="auto"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
     </section>
     <!-- yourserviceconnection -->
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-8637984357942481"
-         data-ad-slot="6327224655"
-         data-ad-format="auto"></ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </figure>
 <div class="container bodycontainer" id="bodycontainer">
     <div id="search-app">
