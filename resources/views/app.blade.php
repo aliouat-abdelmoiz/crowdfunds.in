@@ -15,7 +15,7 @@
     <meta content="txHaVVh3gwpiIVTX8_-oR2D25IaXuednax3Cc5ZBQOI" name="google-site-verification"/>
     <link href="https://facebook.com/yourserviceconnection" rel="publisher"/>
     <!-- bower:css -->
-    
+
     <!-- endbower -->
     {!! Html::style('css/app.css') !!}
     {!! Html::style('css/style.min.css') !!}
