@@ -217,6 +217,7 @@
     ga('send', 'pageview');
 </script>
 <?php endif; ?>
+        <div id="test"></div>
 <?php include public_path('/lib/premium.phtml')?>
 </body>
 </html>
