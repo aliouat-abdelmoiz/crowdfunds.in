@@ -214,7 +214,6 @@
     ga('create', 'UA-53421234-1', 'auto');
     ga('send', 'pageview');
 </script>
-
 <?php endif; ?>
 <?php include public_path('/lib/premium.phtml')?>
 </body>
