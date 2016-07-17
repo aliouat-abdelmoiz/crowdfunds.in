@@ -18,11 +18,23 @@ elixir(function(mix) {
         .styles([
             'style.css',
             'easy-autocomplete.min.css',
-            'easy-autocomplete.themes.min.css'
+            'easy-autocomplete.themes.min.css',
+            '../../../public/bower_components/animate.css/animate.css',
+            '../../../public/bower_components/sweetalert/dist/sweetalert.css',
+            '../../../public/bower_components/dropzone/dist/min/dropzone.min.css',
         ], 'public/css/style.min.css')
     .scripts(
         [
-            'jquery.easy-autocomplete.min.js',
+            '../../../public/bower_components/jquery/dist/jquery.min.js',
+            '../../../public/bower_components/bootstrap/dist/js/bootstrap.js',
+            '../../../public/bower_components/vue/dist/vue.js',
+            '../../../public/bower_components/vue/dist/vue.js',
+            '../../../public/bower_components/jquery.maskedinput/dist/jquery.maskedinput.js',
+            '../../../public/bower_components/sweetalert/dist/sweetalert.min.js',
+            '../../../public/bower_components/jquery-infinite-scroll/jquery.infinitescroll.js',
+            '../../../public/bower_components/vue-resource/dist/vue-resource.js',
+            '../../../public/bower_components/dropzone/dist/min/dropzone.min.js',
+            '../../../public/bower_components/EasyAutocomplete/dist/jquery.easy-autocomplete.min.js',
             'actions.js',
             'autocomplete.js'
         ], 'public/lib/app.min.js'
