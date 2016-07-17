@@ -68,12 +68,12 @@
       <file leaf-file-name="app.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="791">
-              <caret line="105" column="13" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="13" />
+            <state relative-caret-position="709">
+              <caret line="225" column="86" selection-start-line="225" selection-start-column="86" selection-end-line="225" selection-end-column="86" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#ins#0;n#figure#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#8846#8852#0#HTML" expanded="true" />
+                <element signature="e#8755#8761#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -534,12 +534,12 @@
       <workItem from="1464773765507" duration="224000" />
       <workItem from="1465010029557" duration="4212000" />
       <workItem from="1465050121512" duration="93000" />
-      <workItem from="1468724895714" duration="4485000" />
+      <workItem from="1468724895714" duration="4565000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96506000" />
+    <option name="totallyTimeSpent" value="96586000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="985" extended-state="0" />
@@ -981,12 +981,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="791">
-          <caret line="105" column="13" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="13" />
+        <state relative-caret-position="709">
+          <caret line="225" column="86" selection-start-line="225" selection-start-column="86" selection-end-line="225" selection-end-column="86" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ins#0;n#figure#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#8846#8852#0#HTML" expanded="true" />
+            <element signature="e#8755#8761#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

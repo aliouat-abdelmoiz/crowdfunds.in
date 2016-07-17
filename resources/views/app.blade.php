@@ -94,7 +94,6 @@
         </header>
         @yield('banner');
     </section>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- yourserviceconnection -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -224,6 +223,7 @@
     ga('create', 'UA-53421234-1', 'auto');
     ga('send', 'pageview');
 </script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <?php endif; ?>
 <?php include public_path('/lib/premium.phtml')?>
 </body>
