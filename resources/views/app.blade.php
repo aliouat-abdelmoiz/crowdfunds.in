@@ -15,7 +15,7 @@
     <meta content="txHaVVh3gwpiIVTX8_-oR2D25IaXuednax3Cc5ZBQOI" name="google-site-verification"/>
     <link href="https://facebook.com/yourserviceconnection" rel="publisher"/>
     <!-- bower:css -->
-    
+
     <!-- endbower -->
     <noscript id="deferred-styles">
         {!! Html::style('css/app.css') !!}
@@ -94,16 +94,16 @@
             </div>
         </header>
         @yield('banner');
+        <!-- yourserviceconnection -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8637984357942481"
+             data-ad-slot="6327224655"
+             data-ad-format="auto"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
     </section>
-    <!-- yourserviceconnection -->
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-8637984357942481"
-         data-ad-slot="6327224655"
-         data-ad-format="auto"></ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </figure>
 <div class="container bodycontainer" id="bodycontainer">
     <div id="search-app">
@@ -191,7 +191,6 @@
 
 <!-- endbower -->
 <?php if (!isset($_SERVER['HTTP_USER_AGENT']) || stripos($_SERVER['HTTP_USER_AGENT'], 'Speed Insights') === false): ?>
-{!! Html::script('/lib/app.min.js', ['async']) !!}
 <script>
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
@@ -208,6 +207,7 @@
     ga('send', 'pageview');
 </script>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+{!! Html::script('/lib/app.min.js', ['async']) !!}
 <?php endif; ?>
 
 @include('partial.notify')
