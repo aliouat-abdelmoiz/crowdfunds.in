@@ -17,8 +17,23 @@
     <!-- bower:css -->
 
     <!-- endbower -->
-    {!! Html::style('css/app.css') !!}
-    {!! Html::style('css/style.min.css') !!}
+    <noscript id="deferred-styles">
+        {!! Html::style('css/app.css') !!}
+        {!! Html::style('css/style.min.css') !!}
+    </noscript>
+    <script>
+        var loadDeferredStyles = function() {
+            var addStylesNode = document.getElementById("deferred-styles");
+            var replacement = document.createElement("div");
+            replacement.innerHTML = addStylesNode.textContent;
+            document.body.appendChild(replacement);
+            addStylesNode.parentElement.removeChild(addStylesNode);
+        };
+        var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+                webkitRequestAnimationFrame || msRequestAnimationFrame;
+        if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+        else window.addEventListener('load', loadDeferredStyles);
+    </script>
 </head>
 <body class="add-colored-bg">
 <div class="load"
