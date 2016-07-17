@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="775ac1eb-58ac-475d-933b-d4eb06a6b666" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/actions.js" afterPath="$PROJECT_DIR$/resources/assets/js/actions.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" />
     </list>
     <ignored path="crowdfunds.in.iws" />
@@ -68,13 +69,23 @@
       <file leaf-file-name="app.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="709">
-              <caret line="225" column="86" selection-start-line="225" selection-start-column="86" selection-end-line="225" selection-end-column="86" />
+            <state relative-caret-position="287">
+              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#ins#0;n#figure#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#8755#8761#0#HTML" expanded="true" />
+                <element signature="e#8760#8766#0#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="actions.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/actions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="8774">
+              <caret line="213" column="176" selection-start-line="213" selection-start-column="176" selection-end-line="213" selection-end-column="176" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -150,8 +161,8 @@
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/resources/assets/js/actions.js" />
         <option value="$PROJECT_DIR$/public/lib/premium.phtml" />
+        <option value="$PROJECT_DIR$/resources/assets/js/actions.js" />
         <option value="$PROJECT_DIR$/resources/views/app.blade.php" />
       </list>
     </option>
@@ -534,12 +545,12 @@
       <workItem from="1464773765507" duration="224000" />
       <workItem from="1465010029557" duration="4212000" />
       <workItem from="1465050121512" duration="93000" />
-      <workItem from="1468724895714" duration="4565000" />
+      <workItem from="1468724895714" duration="4697000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96586000" />
+    <option name="totallyTimeSpent" value="96718000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="985" extended-state="0" />
@@ -955,14 +966,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="159" column="1" selection-start-line="159" selection-start-column="1" selection-end-line="159" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/lib/premium.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2501">
@@ -979,14 +982,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8774">
+          <caret line="213" column="176" selection-start-line="213" selection-start-column="176" selection-end-line="213" selection-end-column="176" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
-          <caret line="225" column="86" selection-start-line="225" selection-start-column="86" selection-end-line="225" selection-end-column="86" />
+        <state relative-caret-position="287">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ins#0;n#figure#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#8755#8761#0#HTML" expanded="true" />
+            <element signature="e#8760#8766#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
