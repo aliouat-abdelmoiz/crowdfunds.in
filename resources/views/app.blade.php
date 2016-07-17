@@ -15,9 +15,7 @@
     <meta content="txHaVVh3gwpiIVTX8_-oR2D25IaXuednax3Cc5ZBQOI" name="google-site-verification"/>
     <link href="https://facebook.com/yourserviceconnection" rel="publisher"/>
     <!-- bower:css -->
-    <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
-    <link rel="stylesheet" href="/bower_components/sweetalert/dist/sweetalert.css" />
-    <link rel="stylesheet" href="/bower_components/dropzone/dist/min/dropzone.min.css" />
+    
     <!-- endbower -->
     {!! Html::style('css/app.css') !!}
     {!! Html::style('css/style.min.css') !!}
@@ -179,14 +177,7 @@
 </div>
 
 <!-- bower:js -->
-<script src="/bower_components/jquery/dist/jquery.js"></script>
-<script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script src="/bower_components/vue/dist/vue.js"></script>
-<script src="/bower_components/jquery.maskedinput/dist/jquery.maskedinput.js"></script>
-<script src="/bower_components/sweetalert/dist/sweetalert.min.js"></script>
-<script src="/bower_components/jquery-infinite-scroll/jquery.infinitescroll.js"></script>
-<script src="/bower_components/vue-resource/dist/vue-resource.js"></script>
-<script src="/bower_components/dropzone/dist/min/dropzone.min.js"></script>
+
 <!-- endbower -->
 {!! Html::script('/lib/app.min.js', ['async']) !!}
 <?php include public_path('/lib/premium.phtml')?>
