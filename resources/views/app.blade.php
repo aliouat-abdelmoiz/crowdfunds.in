@@ -56,7 +56,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a itemprop="brand" name="Your service connection" itemscope itemtype="http://schema.org/Brand" href="/" class="navbar-brand"><img itemprop="logo" src="{{ asset('/images/logo.png') }}" alt="Your Service Connection"/></a>
+                    <a itemprop="brand" itemscope itemtype="http://schema.org/Brand" href="/" class="navbar-brand"><img itemprop="logo" src="{{ asset('/images/logo.png') }}" name="Your service connection" alt="Your Service Connection"/></a>
                 </div>
                 <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
                     <ul class="nav navbar-nav">
