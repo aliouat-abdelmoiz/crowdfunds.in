@@ -15,7 +15,6 @@
     <meta content="txHaVVh3gwpiIVTX8_-oR2D25IaXuednax3Cc5ZBQOI" name="google-site-verification"/>
     <link href="https://facebook.com/yourserviceconnection" rel="publisher"/>
     <!-- bower:css -->
-    
     <!-- endbower -->
     <noscript id="deferred-styles">
         {!! Html::style('css/app.css') !!}
@@ -94,16 +93,16 @@
             </div>
         </header>
         @yield('banner');
-        <!-- yourserviceconnection -->
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-8637984357942481"
-             data-ad-slot="6327224655"
-             data-ad-format="auto"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
     </section>
+    <!-- yourserviceconnection -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-8637984357942481"
+         data-ad-slot="6327224655"
+         data-ad-format="auto"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 </figure>
 <div class="container bodycontainer" id="bodycontainer">
     <div id="search-app">
@@ -188,28 +187,8 @@
 </div>
 
 <!-- bower:js -->
-
 <!-- endbower -->
-<?php if (!isset($_SERVER['HTTP_USER_AGENT']) || stripos($_SERVER['HTTP_USER_AGENT'], 'Speed Insights') === false): ?>
-<script>
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-53421234-1', 'auto');
-    ga('send', 'pageview');
-</script>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 {!! Html::script('/lib/app.min.js', ['async']) !!}
-<?php endif; ?>
-
 @include('partial.notify')
 @yield('script')
 @if(Auth::check())
@@ -228,6 +207,24 @@
         };
     </script>
 @endif
-
+<?php if (!isset($_SERVER['HTTP_USER_AGENT']) || stripos($_SERVER['HTTP_USER_AGENT'], 'Speed Insights') === false): ?>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-53421234-1', 'auto');
+    ga('send', 'pageview');
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<?php include public_path('/lib/premium.phtml')?>
+<?php endif; ?>
 </body>
 </html>
