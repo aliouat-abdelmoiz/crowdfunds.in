@@ -158,3 +158,65 @@ function imgError(image) {
     image.src = "../images/no.gif";
     return true;
 }
+
+
+// Advertisement
+
+var link = "";
+var cat_name = " ";
+var subcat_name = "";
+
+function adRotate(links) {
+    var id = Math.floor(Math.random() * links.length); // valid index in links
+    var str = links[id]; // selects one of the links: str is a String
+    var item = str.split(','); // splits the string to an Array
+    return item;
+}
+
+function adv(idm, url) {
+    $.ajax({
+        url: '/api/chargeclick',
+        method: 'POST',
+        data: {
+            id: idm,
+        },
+        complete: function () {
+            window.location.href = url;
+        }
+    });
+}
+
+$("document").ready(function () {
+    $.ajax({
+        url: '/api/premium',
+        success: function (data) {
+            $.each(data.advertise, function (key, value) {
+                $.ajax({
+                    url: '/api/decode',
+                    data: {cat_value: value.categories, sub_cats: value.subcategories},
+                    success: function (data) {
+                        var subcat_id = adRotate(data.subcats);
+                        console.log(data.subcats);
+                        $.ajax({
+                            url: '/api/category_name/' + data.cat,
+                            async: false,
+                            success: function (result) {
+                                cat_name = result;
+                                $.ajax({
+                                    async: false,
+                                    url: '/api/subcategory_name/' + subcat_id,
+                                    success: function (result_subcat) {
+                                        subcat_name = result_subcat;
+                                    }
+                                });
+                            }
+                        });
+                        var split_image = value.images.split(",");
+                        link = '/jobs/' + cat_name + "/" + subcat_name + "/" + data.cat + "/" + subcat_id + "/?premium=true&plan_id=" + value.plan_id + "&uid=" + value.user_id;
+                        $(".advertise").append('<p>' + value.title + '</p>' + "<img onclick='adv(this.dataset.id, this.dataset.url)' data-url='" + link + "' data-id='" + value.adv_id + "'" + "class='advshow' src='/uploads/premium/" + split_image[Math.floor(Math.random() * split_image.length)] + "'>" + "<p><br>" + cat_name + " / " + subcat_name + "</p>");
+                    }
+                })
+            });
+        }
+    });
+});
