@@ -184,7 +184,6 @@
 {!! Html::script('/lib/app.min.js', ['async']) !!}
 @include('partial.notify')
 @yield('script')
-<?php include public_path('/lib/premium.phtml')?>
 @if(Auth::check())
     <script async>
         var source = new EventSource("/messages");
@@ -218,7 +217,6 @@
     ga('send', 'pageview');
 </script>
 <?php endif; ?>
-
-
+<?php include public_path('/lib/premium.phtml')?>
 </body>
 </html>
