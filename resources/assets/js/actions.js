@@ -160,4 +160,6 @@ function imgError(image) {
 }
 
 
+alert("ad");
+
 // Advertisement
