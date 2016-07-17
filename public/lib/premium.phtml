@@ -1,30 +1,28 @@
 <script defer="defer">
+    (function() {
+        var link = "";
+        var cat_name = " ";
+        var subcat_name = "";
 
-    var link = "";
-    var cat_name = " ";
-    var subcat_name = "";
+        function adRotate(links) {
+            var id = Math.floor(Math.random() * links.length); // valid index in links
+            var str = links[id]; // selects one of the links: str is a String
+            var item = str.split(','); // splits the string to an Array
+            return item;
+        }
 
-    function adRotate(links) {
-        var id = Math.floor(Math.random() * links.length); // valid index in links
-        var str = links[id]; // selects one of the links: str is a String
-        var item = str.split(','); // splits the string to an Array
-        return item;
-    }
-
-    function adv(idm, url) {
-        $.ajax({
-            url: '/api/chargeclick',
-            method: 'POST',
-            data: {
-                id: idm,
-            },
-            complete: function () {
-                window.location.href = url;
-            }
-        });
-    }
-
-    $("document").ready(function () {
+        function adv(idm, url) {
+            $.ajax({
+                url: '/api/chargeclick',
+                method: 'POST',
+                data: {
+                    id: idm,
+                },
+                complete: function () {
+                    window.location.href = url;
+                }
+            });
+        }
 
         $.ajax({
             url: '/api/premium',
@@ -58,6 +56,5 @@
                 });
             }
         });
-    });
-
+    })();
 </script>

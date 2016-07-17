@@ -158,5 +158,3 @@ function imgError(image) {
     image.src = "../images/no.gif";
     return true;
 }
-
-
