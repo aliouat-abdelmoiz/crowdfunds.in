@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- Microdata markup added by Google Structured Data Markup Helper. -->
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -42,6 +43,7 @@
     Loading...
 </div>
 <div id="example"></div>
+<span itemscope itemtype="http://schema.org/Product">
 <figure class="jumbotron container-fixed">
     <section class="container">
         <header class="navbar bs-docs-nav" role="banner">
@@ -54,8 +56,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="/" class="navbar-brand"><img
-                                src="{{ asset('/images/logo.png') }}" alt=""/></a>
+                    <a itemprop="brand" itemscope itemtype="http://schema.org/Brand" href="/" class="navbar-brand"><img itemprop="logo" src="{{ asset('/images/logo.png') }}" alt="Your Service Connection"/></a>
                 </div>
                 <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
                     <ul class="nav navbar-nav">
@@ -143,6 +144,7 @@
     </section>
     @yield('content')
 </div>
+    </span>
 <footer class="panel-footer footer container-fixed">
     <div class="container footer-links">
         <figure class="row">
