@@ -22,7 +22,7 @@
         {!! Html::style('css/style.min.css') !!}
     </noscript>
     <script>
-        var loadDeferredStyles = function() {
+        var loadDeferredStyles = function () {
             var addStylesNode = document.getElementById("deferred-styles");
             var replacement = document.createElement("div");
             replacement.innerHTML = addStylesNode.textContent;
@@ -31,7 +31,9 @@
         };
         var raf = requestAnimationFrame || mozRequestAnimationFrame ||
                 webkitRequestAnimationFrame || msRequestAnimationFrame;
-        if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+        if (raf) raf(function () {
+            window.setTimeout(loadDeferredStyles, 0);
+        });
         else window.addEventListener('load', loadDeferredStyles);
     </script>
 </head>
@@ -110,21 +112,6 @@
                     <span class="text">You are logged as <b>
                             <a href="/profile">{{ Auth::user()->name == "" ? Auth::user()->username : Auth::user()->name }}</a></b>
                         </span>
-                    @if(Auth::check())
-                        @if(Auth::user()->subscription == null)
-                            <button class="btn btn-sm btn-success" id="subscribe" v-on:click="subscribe">Subscribe
-                            </button>
-                        @else
-                            @if(Auth::user()->subscription->subscribed == 1)
-                                <button class="btn btn-sm btn-success" id="unsubscribe" v-on:click="unsubscribe">
-                                    Unsubscribe
-                                </button>
-                            @else
-                                <button class="btn btn-sm btn-success" id="subscribe" v-on:click="subscribe">Subscribe
-                                </button>
-                            @endif
-                        @endif
-                    @endif
                 </i>
             @endif
         </article>
@@ -195,9 +182,9 @@
 
 <!-- endbower -->
 {!! Html::script('/lib/app.min.js', ['async']) !!}
-<?php include public_path('/lib/premium.phtml')?>
 @include('partial.notify')
 @yield('script')
+<?php include public_path('/lib/premium.phtml')?>
 @if(Auth::check())
     <script async>
         var source = new EventSource("/messages");

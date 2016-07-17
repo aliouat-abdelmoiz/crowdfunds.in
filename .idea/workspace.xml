@@ -58,11 +58,11 @@
       <file leaf-file-name="app.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+            <state relative-caret-position="518">
+              <caret line="186" column="49" selection-start-line="186" selection-start-column="49" selection-end-line="186" selection-end-column="49" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#9285#9291#0#HTML" expanded="true" />
+                <element signature="e#8452#8458#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -511,12 +511,12 @@
       <workItem from="1464773765507" duration="224000" />
       <workItem from="1465010029557" duration="4212000" />
       <workItem from="1465050121512" duration="93000" />
-      <workItem from="1468724895714" duration="2194000" />
+      <workItem from="1468724895714" duration="2398000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94215000" />
+    <option name="totallyTimeSpent" value="94419000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="985" extended-state="6" />
@@ -955,11 +955,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+        <state relative-caret-position="518">
+          <caret line="186" column="49" selection-start-line="186" selection-start-column="49" selection-end-line="186" selection-end-column="49" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#9285#9291#0#HTML" expanded="true" />
+            <element signature="e#8452#8458#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
