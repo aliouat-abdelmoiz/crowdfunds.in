@@ -170,6 +170,9 @@ $("#postal").keyup(function (e) {
             $("#country").val(result.country);
             $("#city").val(result.places[0]['place name']);
             $("#state").val(result.places[0].state);
+            $(".city").html(result.places[0]['place name'] + ", ");
+            $(".state").html(result.places[0].state + ", ");
+            $(".country").html(result.country);
             console.log(result);
         }
     });

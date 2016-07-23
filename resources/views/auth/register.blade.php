@@ -36,9 +36,13 @@
                    placeholder="Password - Should be 8 Character Long"/>
             <input type="password" name="password_confirmation" id="password_confirmation"
                    placeholder="Re-type Password"/>
-            <input type="text" name="zip" id="postal" v-on:keyup="sendData" placeholder="Zip Code"/>
+            <input type="text" name="zip" id="postal" placeholder="Zip Code"/>
             <div class="text-error"></div>
-            <span class="iaddress"></span>
+            <span class="iaddress">
+                <i class="city"></i>
+                <i class="state"></i>
+                <i class="country"></i>
+            </span>
 
             <p class="choiseCities">
                 We Found more then one Location with this zip select your near by Location.
