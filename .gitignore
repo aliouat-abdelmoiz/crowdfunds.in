@@ -3,5 +3,6 @@
 /public/uploads
 /public/images
 /public/vendor
+/public/*.xml
 /bower_components
 .env
