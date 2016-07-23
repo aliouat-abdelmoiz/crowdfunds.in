@@ -31,6 +31,15 @@
                         <small class="sub-text">{{ str_limit($subcategory->tags, 50) }}</small>
                         </p>
                     </article>
+                    <script type="application/ld+json">
+                        {
+                          "@context": "http://schema.org/",
+                          "@type": "Product",
+                          "name": "{{ $subcategory->name }}",
+                          "image": "https://admin.yourserviceconnection.com/upload/subcategories/images/thumbs/{{ $subcategory->image }}",
+                          "description": "{{ $subcategory->title }}"
+                        }
+                        </script>
                 @endforeach
             </div>
         @endforeach

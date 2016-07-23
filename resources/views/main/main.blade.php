@@ -24,19 +24,22 @@
         <article class="col-md-9 no-margin pages">
             <h4 class="heading">Site Categories</h4>
             <ul class="item-new row">
-            @foreach(array_chunk($cats->getCollection()->all(), 3) as $cat)
+                @foreach(array_chunk($cats->getCollection()->all(), 3) as $cat)
                     @foreach($cat as $category)
                         <li class="col-md-4 pageitem">
                             <a href="/Items/{{$category->name}}/{{ $category->id }}">
-                                <img itemprop="image" id="cat{{ $category->id }}" onerror="imgError(this)" class="thumbimg no-margin"
+                                <img itemprop="image" id="cat{{ $category->id }}" onerror="imgError(this)"
+                                     class="thumbimg no-margin"
                                      src="{{ \App\Category::GetPrimaryUserPic($category->id) == "not" ? asset('images/no.gif') : \App\Category::GetPrimaryUserPic($category->id) }}"
                                      alt="{{ $category->name }}"/>
                             </a>
-                            <p itemprop="name" class="categories-subcategories-margin">{{ str_limit($category->name, 30) }}</p>
-                            <a href="/Items/{{$category->name}}/{{ $category->id }}" itemprop="url" class="readmore categories-subcategories-margin">Read More...</a>
+                            <p itemprop="name"
+                               class="categories-subcategories-margin">{{ str_limit($category->name, 30) }}</p>
+                            <a href="/Items/{{$category->name}}/{{ $category->id }}" itemprop="url"
+                               class="readmore categories-subcategories-margin">Read More...</a>
                         </li>
                     @endforeach
-            @endforeach
+                @endforeach
             </ul>
         </article>
         <article class="col-md-3 advertise">
