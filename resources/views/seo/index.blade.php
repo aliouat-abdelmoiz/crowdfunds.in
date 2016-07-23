@@ -1,6 +1,6 @@
 @extends('app')
 @section('title')
-    Jobs near {{ $city or 'by' }} {{ $state or '' }} {{ $country or '' }} - Your Service Connection
+    Jobs in {{ $city or 'by' }} {{ $state or '' }} {{ $country or '' }}
 @endsection
 @section('description')
 
@@ -12,6 +12,13 @@
     <ul class="list-group">
         @foreach($data as $item)
             <li class="list-group-item">{!! $item !!}</li>
+            <script type="application/ld+json">
+                        {
+                          "@context": "http://schema.org/",
+                          "@type": "Job",
+                          "name": "{{ $item }}"
+                        }
+                        </script>
         @endforeach
     </ul>
 @endsection

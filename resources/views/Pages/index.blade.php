@@ -26,9 +26,8 @@
     <script type="application/ld+json">
     {
         "@context": "http://schema.org/",
-        "@type": "Product",
+        "@type": "Page",
         "name": "{{ $page[0]->title }}",
-        "description": "{{ $page[0]->description }}"
     }
     </script>
 @endsection
