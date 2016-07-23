@@ -15,8 +15,8 @@
             <script type="application/ld+json">
                         {
                           "@context": "http://schema.org/",
-                          "@type": "Job",
-                          "name": "{{ $item }}"
+                          "@type": "Review",
+                          "name": "{{ html_entity_decode($item) }}"
                         }
             </script>
         @endforeach
