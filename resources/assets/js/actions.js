@@ -158,3 +158,7 @@ function imgError(image) {
     image.src = "../images/no.gif";
     return true;
 }
+
+$(".zip_code").keyup(function () {
+    console.log("test");
+})
