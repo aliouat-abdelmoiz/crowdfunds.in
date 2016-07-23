@@ -61,6 +61,7 @@
                     </tr>
                     </tbody>
                 </table>
+
             </div>
             <div class="tab-pane" id="tab2">
                 <button class="btn btn-red" onclick="window.location.href = '/jobs'">Create Job

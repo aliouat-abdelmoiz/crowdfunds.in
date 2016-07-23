@@ -28,16 +28,23 @@
                     @foreach($cat as $category)
                         <li class="col-md-4 pageitem">
                             <a href="/Items/{{$category->name}}/{{ $category->id }}">
-                                <img itemprop="image" id="cat{{ $category->id }}" onerror="imgError(this)"
+                                <img id="cat{{ $category->id }}" onerror="imgError(this)"
                                      class="thumbimg no-margin"
                                      src="{{ \App\Category::GetPrimaryUserPic($category->id) == "not" ? asset('images/no.gif') : \App\Category::GetPrimaryUserPic($category->id) }}"
                                      alt="{{ $category->name }}"/>
                             </a>
-                            <p itemprop="name"
-                               class="categories-subcategories-margin">{{ str_limit($category->name, 30) }}</p>
-                            <a href="/Items/{{$category->name}}/{{ $category->id }}" itemprop="url"
-                               class="readmore categories-subcategories-margin">Read More...</a>
+                            <p class="categories-subcategories-margin">{{ str_limit($category->name, 30) }}</p>
+                            <a href="/Items/{{$category->name}}/{{ $category->id }}" class="readmore categories-subcategories-margin">Read More...</a>
                         </li>
+                        <script type="application/ld+json">
+                        {
+                          "@context": "http://schema.org/",
+                          "@type": "Product",
+                          "name": "{{ $category->name }}",
+                          "image": "{{ \App\Category::GetPrimaryUserPic($category->id) == "not" ? asset('images/no.gif') : \App\Category::GetPrimaryUserPic($category->id) }}",
+                          "description": "{{ $category->content }}"
+                        }
+                        </script>
                     @endforeach
                 @endforeach
             </ul>

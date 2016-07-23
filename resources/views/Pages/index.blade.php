@@ -23,4 +23,12 @@
             <p class="page-content">{!!  $page[0]->content !!}</p>
         </section>
     </figure>
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org/",
+        "@type": "Product",
+        "name": "{{ $page[0]->title }}",
+        "description": "{{ $page[0]->description }}"
+    }
+    </script>
 @endsection
