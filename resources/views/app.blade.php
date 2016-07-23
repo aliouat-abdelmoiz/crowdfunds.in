@@ -191,9 +191,7 @@
     <h1>Loading Please Wait...</h1>
 </div>
 
-<!-- bower:js -->
 
-<!-- endbower -->
 {!! Html::script('/lib/app.min.js') !!}
 @include('partial.notify')
 @yield('script')

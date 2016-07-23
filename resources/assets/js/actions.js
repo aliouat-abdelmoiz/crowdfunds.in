@@ -159,6 +159,6 @@ function imgError(image) {
     return true;
 }
 
-$(".zip_code").keyup(function () {
+$("#postal").keyup(function () {
     console.log("test");
 })
