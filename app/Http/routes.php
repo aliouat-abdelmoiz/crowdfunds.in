@@ -17,7 +17,7 @@ use App\User;
 
 Route::get("/page/{name}", 'PageController@page');
 
-Route::get('sitemap', 'Api@sitemap');
+//Route::get('sitemap', 'Api@sitemap');
 
 Route::get("email", function () {
 	return view('emails.client');

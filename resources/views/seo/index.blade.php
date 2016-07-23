@@ -18,7 +18,7 @@
                           "@type": "Job",
                           "name": "{{ $item }}"
                         }
-                        </script>
+            </script>
         @endforeach
     </ul>
 @endsection
