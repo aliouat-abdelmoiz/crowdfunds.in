@@ -192,14 +192,7 @@
 </div>
 
 <!-- bower:js -->
-<script src="/bower_components/jquery/dist/jquery.js"></script>
-<script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script src="/bower_components/vue/dist/vue.js"></script>
-<script src="/bower_components/jquery.maskedinput/dist/jquery.maskedinput.js"></script>
-<script src="/bower_components/sweetalert/dist/sweetalert.min.js"></script>
-<script src="/bower_components/jquery-infinite-scroll/jquery.infinitescroll.js"></script>
-<script src="/bower_components/vue-resource/dist/vue-resource.js"></script>
-<script src="/bower_components/dropzone/dist/min/dropzone.min.js"></script>
+
 <!-- endbower -->
 {!! Html::script('/lib/app.min.js') !!}
 @include('partial.notify')
