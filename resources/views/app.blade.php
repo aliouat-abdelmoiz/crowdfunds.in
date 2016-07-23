@@ -226,7 +226,7 @@
     ga('send', 'pageview');
 </script>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<?php include public_path('/lib/premium.phtml')?>
 <?php endif; ?>
+<?php include public_path('/lib/premium.phtml')?>
 </body>
 </html>
