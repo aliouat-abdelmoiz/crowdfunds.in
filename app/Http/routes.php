@@ -89,7 +89,7 @@ Route::get('/new', function () {
 
 });
 Route::get('/search/{query?}', 'Main@search');
-Route::get('/Items/{name}/{id}', 'Main@Show');
+Route::get('/Items/{cat_name}', 'Main@Show');
 Route::get('/single/{id}', 'Main@Single');
 Route::get('/fb/login', 'Main@loginWithFacebook');
 Route::get('/afterlogin', 'Main@AfterLogin');

@@ -27,7 +27,7 @@
                 @foreach(array_chunk($cats->getCollection()->all(), 3) as $cat)
                     @foreach($cat as $category)
                         <li class="col-md-4 pageitem">
-                            <a href="/Items/{{$category->name}}/{{ $category->id }}">
+                            <a href="/Items/{{$category->name}}">
                                 <img id="cat{{ $category->id }}" onerror="imgError(this)"
                                      class="thumbimg no-margin"
                                      src="{{ \App\Category::GetPrimaryUserPic($category->id) == "not" ? asset('images/no.gif') : \App\Category::GetPrimaryUserPic($category->id) }}"

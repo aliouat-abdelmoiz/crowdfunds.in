@@ -153,9 +153,10 @@ class Main extends Controller {
 		return view('main.main', compact('cats'));
 	}
 
-	public function Show($name, $id) {
-		$categories = Subcategory::where('category_id', '=', $id)->simplePaginate(12);
-		$cat = Category::find($id);
+	public function Show($cat_name) {
+        $cat = Category::whereName($cat_name)->get(['id']);
+		$categories = Subcategory::where('category_id', '=', $cat[0]->id)->simplePaginate(12);
+		$cat = Category::find($cat[0]->id);
 		return view('main.show')->with("categories", $categories)->with('c', $cat);
 	}
 
