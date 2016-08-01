@@ -25,7 +25,7 @@ use URL;
 
 class Api extends Controller
 {
-    function __construct()
+    public function __construct()
     {
         $user = new User();
         \ZipCode::setCountry('US');
@@ -625,7 +625,6 @@ class Api extends Controller
     public function sitemap()
     {
         if (\Auth::check()) {
-
 
             // create sitemap
             $sitemap_subcategories = App::make("sitemap");

@@ -44,7 +44,7 @@
         @endif
         {!! Form::select('category', $categories, '', ['id' => 'category', 'class' => 'form-control']) !!}
         @if(isset($subcategories))
-            {!! Form::select('subcategory', $subcategories, $id2, ['class' => 'form-control add-margin']) !!}
+            {!! Form::select('subcategory', $subcategories, $subcategory, ['class' => 'form-control add-margin']) !!}
         @else
             <select name="subcategory" id="subcategory" class="form-control add-margin"></select>
         @endif

@@ -23,9 +23,9 @@ use Illuminate\Support\Facades\Input;
 
 class Jobs extends Controller
 {
-    function __construct()
+    public function __construct()
     {
-		
+
     }
 
     private function _MatchCategory()
@@ -49,20 +49,20 @@ class Jobs extends Controller
             \ZipCode::setCountry('US');
             $zip = file_get_contents('http://ip-api.com/json');
             $user = json_encode($zip);
-            if ($id and $id2) {
-                $categories = DB::table('categories')->select(['id', 'name'])->where('id', '=', $id)->orderBy('name')->lists('name', 'id');
-                $cats = Category::find($id);
+            if ($category and $subcategory) {
+                $categories = DB::table('categories')->select(['id', 'name'])->where('name', '=', $category)->orderBy('name')->lists('name', 'id');
+                $cats = Category::find(Category::whereName($category)->get(['id'])[0]->id);
                 $subcategories = $cats->subcategories()->get()->lists('name', 'id');
-                return view('jobs.index', compact('categories', 'user', 'subcategories', 'id', 'id2', 'premium', 'seo_cat'));
+                return view('jobs.index', compact('categories', 'user', 'subcategories', 'category', 'subcategory', 'premium', 'seo_cat'));
             } else {
                 return \Redirect::to('/');
             }
         } else {
-            if ($id and $id2) {
-                $categories = DB::table('categories')->select(['id', 'name'])->where('id', '=', $id)->orderBy('name')->lists('name', 'id');
-                $cats = Category::find($id);
+            if ($category and $subcategory) {
+                $categories = DB::table('categories')->select(['id', 'name'])->where('name', '=', $category)->orderBy('name')->lists('name', 'id');
+                $cats = Category::find(Category::whereName($category)->get(['id'])[0]->id);
                 $subcategories = $cats->subcategories()->get()->lists('name', 'id');
-                return view('jobs.index', compact('categories', 'subcategories', 'user', 'id', 'id2', 'premium'));
+                return view('jobs.index', compact('categories', 'subcategories', 'user', 'category', 'subcategory', 'premium'));
             } else {
                 $categories = DB::table('categories')->select(['id', 'name'])->orderBy('name')->lists('name', 'id');
                 $user = User::find(\Auth::id());
@@ -169,7 +169,7 @@ class Jobs extends Controller
                         try {
                             $register = User::create(['username' => $username, 'email' => \Input::get('email'), 'password' => bcrypt($password)]);
                             $register->userinfo()->create(['country' => \Input::get('country'), 'zip_code' => \Input::get('zip'), 'latitude' => \Input::get('latitude'), 'longitude' => \Input::get('longitude'), 'city' => \Input::get('city'), 'state' => \Input::get('state'), 'user_id' => $register->id]);
-                        } catch(\Exception $e) {
+                        } catch (\Exception $e) {
                             echo $e->getMessage();
                         }
 
@@ -179,19 +179,19 @@ class Jobs extends Controller
 
                         if ($register) {
                             $project = Project::create(
-                                ['categories_id' => \Input::get('category'), 'subcategories_id' => \Input::get('subcategory'), 'user_id' => \Auth::id(), 'title' => \Input::get('project_title'), 'body' => \Input::get('description'), 'range' => \Input::get('range'),]);
+                                ['categories_id' => \Input::get('category'), 'subcategories_id' => \Input::get('subcategory'), 'user_id' => \Auth::id(), 'title' => \Input::get('project_title'), 'body' => \Input::get('description'), 'range' => \Input::get('range')]);
 
                             $last_inserted_id = $project->id;
                             foreach ($provider as $select_provider) {
                                 ProviderClient::create(['user_id' => \Auth::id(), 'provider_id' => $select_provider->provider_id, 'project_id' => $last_inserted_id]);
                                 $count++;
-                                \Mail::send('emails.job-notifcation', [\Input::get('project_title'), Input::get('description') ], function ($message) use ($select_provider) {
+                                \Mail::send('emails.job-notifcation', [\Input::get('project_title'), Input::get('description')], function ($message) use ($select_provider) {
                                     $message->to(Provider::find($select_provider->provider_id)->user->email)->subject('New Project Received');
                                     Notification::create([
                                         'text' => 'Received New Job ' . Input::get('project_title'),
                                         'link' => '/projects',
                                         'from' => Auth::user()->id,
-                                        'user_id' => Provider::find($select_provider->provider_id)->user_id
+                                        'user_id' => Provider::find($select_provider->provider_id)->user_id,
                                     ]);
                                 });
                             }
@@ -222,7 +222,7 @@ class Jobs extends Controller
                     $provider = \DB::select('call GetCatSubcat("' . $category . '","' . $subcategory . '","' . Auth::user()->userinfo->latitude . '", "' . Auth::user()->userinfo->longitude . '", "' . Auth::user()->userinfo->city . '", "' . Auth::user()->userinfo->state . '")');
 
                     if (!is_null($provider)) {
-                        $project = Project::create(['categories_id' => \Input::get('category'), 'subcategories_id' => \Input::get('subcategory'), 'user_id' => \Auth::id(), 'title' => \Input::get('project_title'), 'body' => \Input::get('description'), 'range' => \Input::get('range'), ]);
+                        $project = Project::create(['categories_id' => \Input::get('category'), 'subcategories_id' => \Input::get('subcategory'), 'user_id' => \Auth::id(), 'title' => \Input::get('project_title'), 'body' => \Input::get('description'), 'range' => \Input::get('range')]);
 
                         $last_inserted_id = $project->id;
 
@@ -230,21 +230,20 @@ class Jobs extends Controller
 
                             ProviderClient::create(['user_id' => \Auth::id(), 'provider_id' => $select_provider->provider_id, 'project_id' => $last_inserted_id]);
                             $count++;
-                            \Mail::send('emails.job-notifcation', [\Input::get('project_title'), Input::get('description') ], function ($message) use ($select_provider) {
+                            \Mail::send('emails.job-notifcation', [\Input::get('project_title'), Input::get('description')], function ($message) use ($select_provider) {
                                 $message->to(Provider::find($select_provider->provider_id)->user->email)->subject('Project Recieved');
                                 Notification::create([
                                     'text' => 'Received New Job ' . Input::get('project_title'),
                                     'link' => '/projects',
                                     'from' => Auth::user()->id,
-                                    'user_id' => Provider::find($select_provider->provider_id)->user_id
+                                    'user_id' => Provider::find($select_provider->provider_id)->user_id,
                                 ]);
                             });
                         }
 
                         if ($count > 0) {
                             \Session::flash("success", "Job Sent to " . $count . " Providers");
-                        }
-                        else {
+                        } else {
                             \Session::flash("success", "Job Sent to Provider");
                         }
 
@@ -254,7 +253,6 @@ class Jobs extends Controller
             }
         }
     }
-
 
     public function hire()
     {
@@ -270,7 +268,7 @@ class Jobs extends Controller
                     'text' => 'Congratulation you are hired for job - ' . $project->title,
                     'link' => '/profile/' . $provider_id,
                     'from' => Auth::user()->id,
-                    'user_id' => $provider_id
+                    'user_id' => $provider_id,
                 ]);
                 $provider_client = \DB::table('provider_client')->where('project_id', '=', $project_id)->where('provider_id', '<>', $provider_id)->delete();
                 return \Redirect::to('/profile');
@@ -298,7 +296,7 @@ class Jobs extends Controller
                 'text' => 'Contract Ended',
                 'link' => '/profile/' . $pro->id,
                 'from' => $project->user_id,
-                'user_id' => $pro->user->id
+                'user_id' => $pro->user->id,
             ]);
             return "Thanks for providing Feedback";
         } else {
