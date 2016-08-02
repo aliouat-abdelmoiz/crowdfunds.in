@@ -109,8 +109,6 @@ class Jobs extends Controller
             $username = $api->ExtractUsername(\Input::get('email')) . rand(0, 5000) . 'yourserv';
 
             if (\Auth::guest()) {
-                echo "registibng";
-                exit();
                 if ($validator_guest->fails()) {
                     return \Redirect::back()->withErrors($validator_guest->errors())->withInput();
                 } else {
