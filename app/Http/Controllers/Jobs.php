@@ -111,7 +111,7 @@ class Jobs extends Controller
 
             if (\Auth::guest()) {
                 if ($validator_guest->fails()) {
-                    return \Redirect::to('/jobs/' . Category::find(Input::get('category'))->name . "/" . Subcategory::find(Input::get('subcategory'))->name . "/" . \Input::get('category') . '/' . \Input::get('subcategory'))->withErrors($validator_guest->errors())->withInput();
+                    return \Redirect::back()->withErrors($validator_guest->errors())->withInput();
                 } else {
                     $password = rand(0, 600) . 'serv' . rand(0, 5);
                     $register = User::create(['username' => $username, 'email' => \Input::get('email'), 'password' => bcrypt($password)]);
