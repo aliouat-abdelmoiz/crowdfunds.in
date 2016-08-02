@@ -14,7 +14,6 @@ use App\Notification;
 use App\Project;
 use App\Provider;
 use App\ProviderClient;
-use App\Subcategory;
 use App\User;
 use Auth;
 use Carbon\Carbon;
@@ -110,6 +109,8 @@ class Jobs extends Controller
             $username = $api->ExtractUsername(\Input::get('email')) . rand(0, 5000) . 'yourserv';
 
             if (\Auth::guest()) {
+                echo "registibng";
+                exit();
                 if ($validator_guest->fails()) {
                     return \Redirect::back()->withErrors($validator_guest->errors())->withInput();
                 } else {
@@ -134,7 +135,7 @@ class Jobs extends Controller
                 }
             } else {
                 if ($validator->fails()) {
-                    return \Redirect::to('/jobs/' . Category::find(Input::get('category'))->name . "/" . Subcategory::find(Input::get('subcategory'))->name . "/" . \Input::get('category') . '/' . \Input::get('subcategory'))->withErrors($validator_guest->errors())->withInput();
+                    return Redirect::back()->withInput();
                 } else {
                     $project = Project::create(['categories_id' => \Input::get('category'), 'subcategories_id' => \Input::get('subcategory'), 'user_id' => \Auth::id(), 'title' => \Input::get('project_title'), 'body' => \Input::get('description'), 'range' => \Input::get('range'), 'premium' => 1, 'forward_date' => Carbon::now()->addDay(1)]);
 
