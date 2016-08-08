@@ -23,7 +23,7 @@
             <div class="row">
                 @foreach($subcat as $subcategory)
                     <article class="col-md-4 image-list add-margin add-border-bottom pageitem">
-                        <a href="/jobs/{{ \App\Category::find($subcategory->category->id)->name }}/{{ $subcategory->name }} }}">
+                        <a href="/jobs/{{ \App\Category::find($subcategory->category->id)->name }}/{{ $subcategory->name }}">
                             <div class="overlay-link">Send Job</div>
                             <img class="thumbimg" onerror="imgError(this)" src="/images/uploads/thumbs/{{ $subcategory->image }} " alt=""/>
                         </a>
