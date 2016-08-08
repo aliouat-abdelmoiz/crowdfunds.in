@@ -237,6 +237,8 @@
             return item;
         }
 
+        $(".easy-autocomplete").css("width", "100%");
+
         function adv(idm, url) {
             $.ajax({
                 url: '/api/chargeclick',
@@ -286,6 +288,6 @@
 
 </script>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<?php endif; ?>
+<?php endif;?>
 </body>
 </html>
