@@ -25,7 +25,7 @@
                     <article class="col-md-4 image-list add-margin add-border-bottom pageitem">
                         <a href="/jobs/{{ \App\Category::find($subcategory->category->id)->name }}/{{ $subcategory->name }}">
                             <div class="overlay-link">Send Job</div>
-                            <img class="thumbimg" onerror="imgError(this)" src="/images/uploads/thumbs/{{ $subcategory->image }} " alt=""/>
+                            <img class="thumbimg" onerror="imgError(this)" src="https://admin.yourserviceconnection.com/upload/subcategories/images/thumbs/{{ $subcategory->image }} " alt=""/>
                         </a>
                         <p><small>{{ $subcategory->name }}</small>
                         <small class="sub-text">{{ str_limit($subcategory->tags, 50) }}</small>

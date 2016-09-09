@@ -30,7 +30,7 @@
                             <a href="/Items/{{$category->name}}">
                                 <img id="cat{{ $category->id }}" onerror="imgError(this)"
                                      class="thumbimg no-margin"
-                                     src="{{ \App\Category::GetPrimaryUserPic($category->id) == "not" ? '/images/uploads/thumbs/' . \App\Category::find($category->id)->image : \App\Category::GetPrimaryUserPic($category->id) }}"
+                                     src="{{ \App\Category::GetPrimaryUserPic($category->id) == "not" ? 'https://admin.yourserviceconnection.com/upload/categories/images/thumbs/' . \App\Category::find($category->id)->image : \App\Category::GetPrimaryUserPic($category->id) }}"
                                      alt="{{ $category->name }}"/>
                             </a>
                             <p class="categories-subcategories-margin">{{ str_limit($category->name, 30) }}</p>

@@ -16,7 +16,9 @@
     <meta content="txHaVVh3gwpiIVTX8_-oR2D25IaXuednax3Cc5ZBQOI" name="google-site-verification"/>
     <link href="https://facebook.com/yourserviceconnection" rel="publisher"/>
     <!-- bower:css -->
-
+    <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
+    <link rel="stylesheet" href="/bower_components/sweetalert/dist/sweetalert.css" />
+    <link rel="stylesheet" href="/bower_components/dropzone/dist/min/dropzone.min.css" />
     <!-- endbower -->
     <noscript id="deferred-styles">
         {!! Html::style('css/app.css') !!}
