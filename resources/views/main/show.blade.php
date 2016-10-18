@@ -25,7 +25,7 @@
                     <article class="col-md-4 image-list add-margin add-border-bottom pageitem">
                         <a href="/jobs/{{ \App\Category::find($subcategory->category->id)->name }}/{{ $subcategory->name }}">
                             <div class="overlay-link">Send Job</div>
-                            <img class="thumbimg" onerror="imgError(this)" src="{{ !isset($subcategory->image)||$subcategory->image == '' ? '/images/no-logo.png' : 'https://admin.yourserviceconnection.com/upload/subcategories/images/thumbs/' . $subcategory->image }} " alt=""/>
+                            <img class="thumbimg" onerror="imgErrorSub(this)" src="{{ !isset($subcategory->image)||$subcategory->image == '' ? '/images/no-logo.png' : 'https://admin.yourserviceconnection.com/upload/subcategories/images/thumbs/' . $subcategory->image }} " alt=""/>
                         </a>
                         <p><small>{{ $subcategory->name }}</small>
                         <small class="sub-text">{{ str_limit($subcategory->tags, 50) }}</small>
@@ -48,5 +48,13 @@
         <h4>Advertise</h4>
     </article>
 </section>
+
+<script type="text/javascript">
+    function imgErrorSub(image) {
+        image.onerror = "";
+        image.src = "/images/no-logo.png";
+        return true;
+    }
+</script>
 
 @stop
