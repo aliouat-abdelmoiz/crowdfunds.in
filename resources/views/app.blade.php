@@ -239,7 +239,7 @@
             return item;
         }
 
-        $(".easy-autocomplete").css("width", "100%");
+        //$(".easy-autocomplete").css("width", "100%");
 
         function adv(idm, url) {
             $.ajax({
