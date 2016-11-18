@@ -11,7 +11,7 @@
                             <div class="overlay-link">Send Job</div>
                             <img class="thumbimg" onerror="imgErrorSub(this)" src="{{ !isset($subcat->image)||$subcat->image == '' ? '/images/no-logo.png' : 'https://admin.yourserviceconnection.com/upload/subcategories/images/thumbs/' . $subcat->image }} " alt=""/>
                         </a>
-                        <a class="clearfix" href="/jobs/{{ \App\Category::find($subcat->category_id)->name }}/{{ $subcat->name }}/{{ $subcat->category_id }}/{{ $subcat->id }}">
+                        <a class="clearfix" href="/jobs/{{ \App\Category::find($subcat->category_id)->name }}/{{ $subcat->name }} }}">
                             <h5>{{ $subcat->name }}</h5></a>
                         <small>{{ \App\Category::find($subcat->category_id)->name }}</small>
                         <p>{{ str_limit(\App\Category::find($subcat->category_id)->content, 50) }}</p>
