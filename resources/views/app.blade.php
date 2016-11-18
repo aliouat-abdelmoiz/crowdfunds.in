@@ -291,5 +291,10 @@
 </script>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <?php endif;?>
+<script type="text/javascript">
+    $("document").ready(function() {
+        $(".easy-autocomplete").removeAttr("style");
+    })
+</script>
 </body>
 </html>
