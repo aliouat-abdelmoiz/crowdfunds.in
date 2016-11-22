@@ -55,16 +55,12 @@ class Api extends Controller
                 userinformation.id,
                 userinformation.latitude,
                 userinformation.longitude,
-                userinformation.country,
-                userinformation.city,
-                userinformation.state,
-                userinformation.user_id
             FROM adv__managements INNER JOIN plans ON adv__managements.plan_id = plans.id
                  INNER JOIN userinformation ON plans.user_id = userinformation.user_id
             WHERE (plans.active = 1 AND GetDistance('MI', userinformation.latitude, userinformation.longitude, '" . $info->lat . "', '" . $info->lon . "') <= 25)
             ORDER BY RAND() LIMIT 3
             ");
-            return $advertise;
+            return \Response::make(['advertise' => $advertise]);
         } else {
             $advertise = \DB::select("
                 SELECT plans.id,
