@@ -21,11 +21,8 @@ class AdvertiseController extends Controller
      */
     public function index()
     {
+        return "Hello";
         if (\Auth::user()->hasRole('Provider')) {
-            $search_categories = Cache::remember('users', 100, function () {
-                return unserialize(json_decode(\Auth::user()->provider->ppivot->fetch('category_id')[0]));
-            });
-            return $search_categories;
             $search_categories = unserialize(json_decode(\Auth::user()->provider->ppivot->fetch('category_id')[0]));
             $search_subcategories = unserialize(json_decode(\Auth::user()->provider->ppivot->fetch('subcategory_id')[0]));
 
