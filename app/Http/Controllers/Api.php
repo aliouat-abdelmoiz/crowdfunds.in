@@ -64,7 +64,7 @@ class Api extends Controller
             WHERE (plans.active = 1 AND GetDistance('MI', userinformation.latitude, userinformation.longitude, '" . $info->lat . "', '" . $info->lon . "') <= 25)
             ORDER BY RAND() LIMIT 3
             ");
-            return \Response::make(['advertise' => $advertise]);
+            return $advertise;
         } else {
             $advertise = \DB::select("
                 SELECT plans.id,
