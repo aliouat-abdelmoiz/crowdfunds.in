@@ -2,13 +2,12 @@
 namespace App\Http\Controllers;
 
 use App\Adv_Management;
-use App\Http\Requests;
 use App\Http\Requests\AdvertiseRequest;
 use App\Notification;
 use App\Plan;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Input;
 use Image;
-use Illuminate\Http\Response;
 use Stripe\Charge;
 use Stripe\Customer;
 
@@ -22,17 +21,15 @@ class AdvertiseController extends Controller
      */
     public function index()
     {
-        if (\Auth::check()) {
-            if (\Auth::user()->hasRole('Provider')) {
-                $search_categories = unserialize(json_decode(\Auth::user()->provider->ppivot->fetch('category_id') [0]));
-                $search_subcategories = unserialize(json_decode(\Auth::user()->provider->ppivot->fetch('subcategory_id') [0]));				
+        if (\Auth::user()->hasRole('Provider')) {
+            $search_categories = unserialize(json_decode(\Auth::user()->provider->ppivot->fetch('category_id')[0]));
+            $search_subcategories = unserialize(json_decode(\Auth::user()->provider->ppivot->fetch('subcategory_id')[0]));
 
-                $categories = \DB::table('categories')->whereIn('id', $search_categories)->get(['id', 'name']);
-                $subcategories = \DB::table('subcategories')->whereIn('id', $search_subcategories)->get(['id', 'name']);
-                return view('Advertise.index', compact('categories', 'subcategories'));
-            } else {
-                return \Redirect::to('/plan/show');
-            }
+            $categories = \DB::table('categories')->whereIn('id', $search_categories)->get(['id', 'name']);
+            $subcategories = \DB::table('subcategories')->whereIn('id', $search_subcategories)->get(['id', 'name']);
+            return view('Advertise.index', compact('categories', 'subcategories'));
+        } else {
+            return \Redirect::to('/plan/show');
         }
     }
 
@@ -208,7 +205,7 @@ class AdvertiseController extends Controller
                                         'text' => 'Advertisement Created Successfully',
                                         'link' => '/advertise/admin',
                                         'from' => \Auth::id(),
-                                        'user_id' => \Auth::id()
+                                        'user_id' => \Auth::id(),
                                     ]);
                                 });
 
@@ -284,7 +281,7 @@ class AdvertiseController extends Controller
                                         'text' => 'Advertisement Created Successfully',
                                         'link' => '/advertise/admin',
                                         'from' => \Auth::id(),
-                                        'user_id' => \Auth::id()
+                                        'user_id' => \Auth::id(),
                                     ]);
                                 });
 
@@ -310,7 +307,6 @@ class AdvertiseController extends Controller
 
         //
 
-
     }
 
     /**
@@ -325,13 +321,13 @@ class AdvertiseController extends Controller
             if (\Auth::user()->hasRole('Provider')) {
                 $advertisement = Plan::whereUserId(\Auth::id())->whereId($plan)->with(['advertise' => function ($query) use ($id) {
                     return $query->where('id', '=', $id);
-                }
+                },
                 ])->first();
 
                 $images = explode(",", $advertisement->advertise->images);
 
-                $search_categories = unserialize(json_decode(\Auth::user()->provider->ppivot->fetch('category_id') [0]));
-                $search_subcategories = unserialize(json_decode(\Auth::user()->provider->ppivot->fetch('subcategory_id') [0]));
+                $search_categories = unserialize(json_decode(\Auth::user()->provider->ppivot->fetch('category_id')[0]));
+                $search_subcategories = unserialize(json_decode(\Auth::user()->provider->ppivot->fetch('subcategory_id')[0]));
 
                 $categories = \DB::table('categories')->whereIn('id', $search_categories)->get(['id', 'name']);
                 $subcategories = \DB::table('subcategories')->whereIn('id', $search_subcategories)->get(['id', 'name']);
