@@ -42,12 +42,9 @@ class Api extends Controller
         $zip = file_get_contents('http://ip-api.com/json');
         $info = json_decode($zip);
         if (\Auth::guest()) {
-            return "Hello";
-        } else {
             $advertise = \DB::select("
                 SELECT plans.id,
                 plans.active,
-                plans.user_id AS 'plid',
                 adv__managements.id,
                 adv__managements.plan_id,
                 adv__managements.categories,
@@ -64,8 +61,7 @@ class Api extends Controller
                 userinformation.user_id
             FROM adv__managements INNER JOIN plans ON adv__managements.plan_id = plans.id
                  INNER JOIN userinformation ON plans.user_id = userinformation.user_id
-            WHERE (active = 1 AND GetDistance('MI', userinformation.latitude, userinformation.longitude, '" . \Auth::user()->userinfo->latitude . "', '" . \Auth::user()->userinfo->longitude . "') <= 25)
-            AND plans.user_id <> '" . \Auth::id() . "'
+            WHERE (active = 1 AND GetDistance('MI', userinformation.latitude, userinformation.longitude, '" . $info->lat . "', '" . $info->lon . "') <= 25)
             ORDER BY RAND() LIMIT 3
             ");
             return \Response::make(['advertise' => $advertise]);
