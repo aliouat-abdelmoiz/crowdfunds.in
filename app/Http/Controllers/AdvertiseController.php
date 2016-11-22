@@ -21,16 +21,17 @@ class AdvertiseController extends Controller
      */
     public function index()
     {
-        return "Hello";
-        if (\Auth::user()->hasRole('Provider')) {
-            $search_categories = unserialize(json_decode(\Auth::user()->provider->ppivot->fetch('category_id')[0]));
-            $search_subcategories = unserialize(json_decode(\Auth::user()->provider->ppivot->fetch('subcategory_id')[0]));
+        if (\Auth::check()) {
+            if (\Auth::user()->hasRole('Provider')) {
+                $search_categories = unserialize(json_decode(\Auth::user()->provider->ppivot->fetch('category_id')[0]));
+                $search_subcategories = unserialize(json_decode(\Auth::user()->provider->ppivot->fetch('subcategory_id')[0]));
 
-            $categories = \DB::table('categories')->whereIn('id', $search_categories)->get(['id', 'name']);
-            $subcategories = \DB::table('subcategories')->whereIn('id', $search_subcategories)->get(['id', 'name']);
-            return view('Advertise.index', compact('categories', 'subcategories'));
-        } else {
-            return \Redirect::to('/plan/show');
+                $categories = \DB::table('categories')->whereIn('id', $search_categories)->get(['id', 'name']);
+                $subcategories = \DB::table('subcategories')->whereIn('id', $search_subcategories)->get(['id', 'name']);
+                return view('Advertise.index', compact('categories', 'subcategories'));
+            } else {
+                return \Redirect::to('/plan/show');
+            }
         }
     }
 
