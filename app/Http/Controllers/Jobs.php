@@ -37,8 +37,10 @@ class Jobs extends Controller
 
     public function index($category = null, $subcategory = null, $id = null, $id2 = null)
     {
-        if (isset($_GET['premium']) || !empty(\Input::get('premium')) || \Input::get('premium') == "" || \Input::get('premium') == "true") {
-            $premium = \Input::get('premium');
+        if (isset($_GET['premium'])) {
+            if (\Input::get('premium') == "true") {
+                $premium = \Input::get('premium');
+            }
         } else {
             $premium = "x";
         }
