@@ -41,55 +41,56 @@ class Api extends Controller
         \ZipCode::setCountry('US');
         $zip = file_get_contents('http://ip-api.com/json');
         $info = json_decode($zip);
-        if (\Auth::guest()) {
-            $advertise = \DB::select("
-                SELECT plans.id,
-                plans.active,
-                adv__managements.id,
-                adv__managements.plan_id,
-                adv__managements.categories,
-                adv__managements.subcategories,
-                adv__managements.images,
-                adv__managements.title,
-                adv__managements.description,
-                userinformation.id,
-                userinformation.latitude,
-                userinformation.longitude,
-                userinformation.country,
-                userinformation.city,
-                userinformation.state,
-                userinformation.user_id
-            FROM adv__managements INNER JOIN plans ON adv__managements.plan_id = plans.id
-                 INNER JOIN userinformation ON plans.user_id = userinformation.user_id
-            WHERE (plans.active = 1 AND GetDistance('MI', userinformation.latitude, userinformation.longitude, '" . $info->lat . "', '" . $info->lon . "') <= 25)
-            ORDER BY RAND() LIMIT 3
-            ");
-            return \Response::make(['advertise' => $advertise]);
-        } else {
-            $advertise = \DB::select("
-                SELECT plans.id,
-                plans.active,
-                plans.user_id AS 'plid',
-                adv__managements.id,
-                adv__managements.plan_id,
-                adv__managements.categories,
-                adv__managements.subcategories,
-                adv__managements.images,
-                adv__managements.title,
-                adv__managements.description,
-                userinformation.id,
-                userinformation.latitude,
-                userinformation.longitude,
-                userinformation.country,
-                userinformation.city,
-                userinformation.state,
-                userinformation.user_id
-            FROM adv__managements INNER JOIN plans ON adv__managements.plan_id = plans.id
-                 INNER JOIN userinformation ON plans.user_id = userinformation.user_id
-            WHERE (active = 1 AND GetDistance('MI', userinformation.latitude, userinformation.longitude, '" . \Auth::user()->userinfo->latitude . "', '" . \Auth::user()->userinfo->longitude . "') <= 25)
-            AND plans.user_id <> '" . \Auth::id() . "'
-            ORDER BY RAND() LIMIT 3
-            ");
+        // if (\Auth::guest()) {
+        //     $advertise = \DB::select("
+        //         SELECT plans.id,
+        //         plans.active,
+        //         adv__managements.id,
+        //         adv__managements.plan_id,
+        //         adv__managements.categories,
+        //         adv__managements.subcategories,
+        //         adv__managements.images,
+        //         adv__managements.title,
+        //         adv__managements.description,
+        //         userinformation.id,
+        //         userinformation.latitude,
+        //         userinformation.longitude,
+        //         userinformation.country,
+        //         userinformation.city,
+        //         userinformation.state,
+        //         userinformation.user_id
+        //     FROM adv__managements INNER JOIN plans ON adv__managements.plan_id = plans.id
+        //          INNER JOIN userinformation ON plans.user_id = userinformation.user_id
+        //     WHERE (plans.active = 1 AND GetDistance('MI', userinformation.latitude, userinformation.longitude, '" . $info->lat . "', '" . $info->lon . "') <= 25)
+        //     ORDER BY RAND() LIMIT 3
+        //     ");
+        //     return \Response::make(['advertise' => $advertise]);
+        // } else {
+        //     $advertise = \DB::select("
+        //         SELECT plans.id,
+        //         plans.active,
+        //         plans.user_id AS 'plid',
+        //         adv__managements.id,
+        //         adv__managements.plan_id,
+        //         adv__managements.categories,
+        //         adv__managements.subcategories,
+        //         adv__managements.images,
+        //         adv__managements.title,
+        //         adv__managements.description,
+        //         userinformation.id,
+        //         userinformation.latitude,
+        //         userinformation.longitude,
+        //         userinformation.country,
+        //         userinformation.city,
+        //         userinformation.state,
+        //         userinformation.user_id
+        //     FROM adv__managements INNER JOIN plans ON adv__managements.plan_id = plans.id
+        //          INNER JOIN userinformation ON plans.user_id = userinformation.user_id
+        //     WHERE (active = 1 AND GetDistance('MI', userinformation.latitude, userinformation.longitude, '" . \Auth::user()->userinfo->latitude . "', '" . \Auth::user()->userinfo->longitude . "') <= 25)
+        //     AND plans.user_id <> '" . \Auth::id() . "'
+        //     ORDER BY RAND() LIMIT 3
+        //     ");
+            $advertise = [];
             return \Response::make(['advertise' => $advertise]);
         }
     }
