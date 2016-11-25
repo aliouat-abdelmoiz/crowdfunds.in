@@ -24,3 +24,12 @@
         <h4>Advertise</h4>
     </article>
 @endsection
+@section('script')
+    <script type="text/javascript">
+    function imgErrorSub(image) {
+        image.onerror = "";
+        image.src = "/images/no-logo.png";
+        return true;
+    }
+    </script>
+@stop
