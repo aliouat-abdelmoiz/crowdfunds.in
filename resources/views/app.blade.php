@@ -20,10 +20,10 @@
     <link rel="stylesheet" href="/bower_components/sweetalert/dist/sweetalert.css" />
     <link rel="stylesheet" href="/bower_components/dropzone/dist/min/dropzone.min.css" />
     <!-- endbower -->
-    <noscript id="deferred-styles">
+    {{-- <noscript id="deferred-styles"> --}}
         {!! Html::style('css/app.css') !!}
         {!! Html::style('css/style.min.css') !!}
-    </noscript>
+    {{-- </noscript> --}}
     <script>
         var loadDeferredStyles = function () {
             var addStylesNode = document.getElementById("deferred-styles");
